@@ -10,6 +10,7 @@
             <div class="row g-5 g-xxl-8">
                 <!--begin::Col-->
                 <div class="col-xl-8">
+                    {% if request.user.is_authenticated %}
                     <!--begin::Feeds Widget |Create Post -->
                     <div class="card mb-5 mb-xxl-8">
                         <!--begin::Body-->
@@ -167,7 +168,7 @@
                         <!--end::Body-->
                     </div>
                     <!--end::Feeds Widget  |Create Post -->
-
+{% endif %}
                     <!--begin::Feeds Widget -->
                     <div class="card mb-5 mb-xxl-8">
                         <!--begin::Body-->
@@ -190,6 +191,7 @@
                                     <!--end::Info-->
                                 </div>
                                 <!--end::User-->
+                                {% if request.user.is_authenticated %}
                                 <!--begin::Menu-->
                                 <div class="my-0">
                                     <button type="button"
@@ -238,6 +240,7 @@
                                     <!--end::Menu 2-->
                                 </div>
                                 <!--end::Menu-->
+                                {% endif %}
                             </div>
                             <!--end::Header-->
                             <!--begin::Post-->

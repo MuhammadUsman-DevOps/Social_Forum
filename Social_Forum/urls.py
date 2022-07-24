@@ -12,6 +12,7 @@ urlpatterns = [
     path('news-feed/', views.news_feed, name="news_feed"),
     path('accounts/login/', views.auth_login, name="auth_login"),
     path('accounts/signup/', views.auth_singup, name="auth_singup"),
+    path('accounts/logout/', views.auth_logout, name="auth_logout"),
 ]
 urlpatterns += staticfiles_urlpatterns()
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

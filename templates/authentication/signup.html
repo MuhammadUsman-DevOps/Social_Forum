@@ -40,7 +40,8 @@
 					<!--begin::Wrapper-->
 					<div class="w-lg-600px bg-body rounded shadow-sm p-10 p-lg-15 mx-auto">
 						<!--begin::Form-->
-						<form class="form w-100" novalidate="novalidate" id="kt_sign_up_form">
+						<form class="form w-100" method="post" novalidate="novalidate" id="kt_sign_up_form">
+                            {% csrf_token %}
 							<!--begin::Heading-->
 							<div class="mb-10 text-center">
 								<!--begin::Title-->
@@ -58,13 +59,13 @@
 								<!--begin::Col-->
 								<div class="col-xl-6">
 									<label class="form-label fw-bolder text-dark fs-6">First Name</label>
-									<input class="form-control form-control-lg form-control-solid" type="text" placeholder="" name="first-name" autocomplete="off" />
+									<input class="form-control form-control-lg form-control-solid" type="text" placeholder="" name="first_name" autocomplete="off" />
 								</div>
 								<!--end::Col-->
 								<!--begin::Col-->
 								<div class="col-xl-6">
 									<label class="form-label fw-bolder text-dark fs-6">Last Name</label>
-									<input class="form-control form-control-lg form-control-solid" type="text" placeholder="" name="last-name" autocomplete="off" />
+									<input class="form-control form-control-lg form-control-solid" type="text" placeholder="" name="last_name" autocomplete="off" />
 								</div>
 								<!--end::Col-->
 							</div>

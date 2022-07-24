@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb24d59-331f-4fd7-a3d4-7676f99528a7" name="Default Changelist" comment="" />
+    <list default="true" id="cdb24d59-331f-4fd7-a3d4-7676f99528a7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social_Forum/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Forum_User/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forum_User/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social_Forum/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Social_Forum/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social_Forum/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Social_Forum/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social_Forum/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Social_Forum/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/custom/authentication/sign-in/general.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/custom/authentication/sign-in/general.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/custom/authentication/sign-up/general.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/custom/authentication/sign-up/general.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/authentication/signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/authentication/signin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/authentication/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/authentication/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bases/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bases/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/forum/news_feed.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/forum/news_feed.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,12 +25,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="2CNiFWzwIpetxmrhexo3MWRFqft" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -24,6 +43,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/authentication" />
   </component>
@@ -71,7 +91,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1658649339364</updated>
-      <workItem from="1658649505911" duration="11432000" />
+      <workItem from="1658649505911" duration="15903000" />
     </task>
     <servers />
   </component>
@@ -79,9 +99,9 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2536" y="192" width="672" height="676" key="search.everywhere.popup" timestamp="1658659986440">
+    <state x="2536" y="192" width="672" height="676" key="search.everywhere.popup" timestamp="1658670571979">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2536" y="192" width="672" height="676" key="search.everywhere.popup/0.0.1536.864/1920.0.1920.1080@1920.0.1920.1080" timestamp="1658659986440" />
+    <state x="2536" y="192" width="672" height="676" key="search.everywhere.popup/0.0.1536.864/1920.0.1920.1080@1920.0.1920.1080" timestamp="1658670571979" />
   </component>
 </project>

@@ -598,7 +598,7 @@
                                                             <div class="d-flex flex-column">
                                                                 <a href="#"
                                                                    class="fs-6 text-gray-800 text-hover-primary fw-bold">BoomApp
-                                                                    by Keenthemes</a>
+                                                                    by </a>
                                                                 <span class="fs-7 text-muted fw-bold">#45789</span>
                                                             </div>
                                                             <!--end::Title-->
@@ -1032,6 +1032,7 @@
                                 <!--end::Search-->
                                 <!--begin::User menu-->
                                 <div class="d-flex align-items-center ms-1 ms-lg-3" id="kt_header_user_menu_toggle">
+                                    {% if request.user.is_authenticated %}
                                     <!--begin::Menu wrapper-->
                                     <div class="cursor-pointer symbol symbol-30px symbol-md-40px"
                                          data-kt-menu-trigger="click" data-kt-menu-attach="parent"
@@ -1085,13 +1086,16 @@
                                         <!--end::Menu separator-->
                                         <!--begin::Menu item-->
                                         <div class="menu-item px-5">
-                                            <a href="#"
+                                            <a href="{% url 'auth_logout' %}"
                                                class="menu-link px-5">Sign Out</a>
                                         </div>
                                         <!--end::Menu item-->
                                     </div>
                                     <!--end::User account menu-->
                                     <!--end::Menu wrapper-->
+                                        {% else %}
+                                        <a href="{% url 'auth_login' %}" class="btn btn-active-light-primary">Sign In</a>
+                                    {% endif %}
                                 </div>
                                 <!--end::User menu-->
                                 <!--begin::Header menu toggle-->
