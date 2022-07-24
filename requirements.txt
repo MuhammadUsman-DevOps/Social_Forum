@@ -1,0 +1,11 @@
+asgiref==3.5.2
+bleach==5.0.1
+Django==3.2.14
+django-post-office==3.6.1
+jsonfield==3.1.0
+Pillow==9.2.0
+pytz==2022.1
+six==1.16.0
+sqlparse==0.4.2
+typing-extensions==4.3.0
+webencodings==0.5.1
