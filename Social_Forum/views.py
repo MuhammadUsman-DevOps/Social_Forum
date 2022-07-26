@@ -4,6 +4,8 @@ from django.contrib.auth.hashers import make_password
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 
+from Forum_User.models import Post, ContentPost
+
 
 def auth_login(request):
     if request.method == 'POST':
@@ -48,4 +50,6 @@ def auth_logout(request):
 
 
 def news_feed(request):
-    return render(request, template_name="forum/news_feed.html")
+    posts = ContentPost.objects.all()
+    context = {'posts': reversed(posts)}
+    return render(request, template_name="forum/news_feed.html", context=context)

@@ -17,8 +17,8 @@ class UserProfile(models.Model):
 
 
 class Post(models.Model):
-    title = models.TextField()
-    slug = models.SlugField()
+    title = models.TextField(null=True, blank=True)
+    slug = models.SlugField(null=True, blank=True)
     likes = models.IntegerField(default=0)
     dislikes = models.IntegerField(default=0)
 
@@ -31,7 +31,25 @@ class Post(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.title
+        return self.user.username
+
+    def comments(self):
+        # TODO
+        Comment.objects.filter(post=self)
+
+    def get_upvotes(self):
+        return Votes.objects.filter(upvote=True, post=self).count()
+
+    def get_downvotes(self):
+        return Votes.objects.filter(downvote=True, post=self).count()
+
+    def is_voted(self, user):
+        vote = None
+        try:
+            vote = Votes.objects.get(post=self, user=user)
+        except:
+            vote = None
+        return vote
 
     class Meta:
         verbose_name = "Posts"
@@ -50,7 +68,7 @@ class ContentPost(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.post.title
+        return self.text_content
 
     class Meta:
         verbose_name = "Content Posts"
@@ -76,4 +94,19 @@ class Comment(models.Model):
         verbose_name_plural = "Comments"
 
 
+class Votes(models.Model):
+    upvote = models.BooleanField(default=False)
+    downvote = models.BooleanField(default=False)
 
+    vote_by = models.ForeignKey(User, on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.vote_by.username
+
+    class Meta:
+        verbose_name = "Votes"
+        verbose_name_plural = "Votes"
