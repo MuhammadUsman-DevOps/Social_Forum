@@ -2,19 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb24d59-331f-4fd7-a3d4-7676f99528a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Forum_User/migrations/0003_auto_20220725_1714.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Forum_User/migrations/0004_alter_votes_options.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/post/images/apple-touch-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/post/images/apple-touch-icon_lrxd3QK.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/post/images/c8673ad4c46ade00cf3bd0049db62b16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/post/images/c8673ad4c46ade00cf3bd0049db62b16_copy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/post/images/c8673ad4c46ade00cf3bd0049db62b16_copy_Wk2i6uF.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/post/images/download_1.jfif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/post/images/usecasediagram.drawio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/custom/social_forum/addpost.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/forum/comment_section.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/forum/post_section.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Forum_User/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forum_User/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Forum_User/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forum_User/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Forum_User/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forum_User/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Forum_User/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forum_User/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social_Forum/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Social_Forum/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social_Forum/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Social_Forum/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social_Forum/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Social_Forum/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bases/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bases/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/forum/news_feed.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/forum/news_feed.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -22,18 +48,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="2CNiFWzwIpetxmrhexo3MWRFqft" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/authentication" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../python development/socially" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -69,6 +98,7 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -80,16 +110,28 @@
       <option name="presentableId" value="Default" />
       <updated>1658649339364</updated>
       <workItem from="1658649505911" duration="17262000" />
+      <workItem from="1658723459435" duration="25367000" />
+      <workItem from="1658757287484" duration="9778000" />
+      <workItem from="1658813571412" duration="8672000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="2536" y="192" width="672" height="676" key="search.everywhere.popup" timestamp="1658670571979">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2536" y="192" width="672" height="676" key="search.everywhere.popup/0.0.1536.864/1920.0.1920.1080@1920.0.1920.1080" timestamp="1658670571979" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

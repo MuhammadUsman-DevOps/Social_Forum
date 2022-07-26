@@ -11,345 +11,88 @@
                 <!--begin::Col-->
                 <div class="col-xl-8">
                     {% if request.user.is_authenticated %}
-                    <!--begin::Feeds Widget |Create Post -->
-                    <div class="card mb-5 mb-xxl-8">
-                        <!--begin::Body-->
-                        <div class="card-body pb-0">
-                            <!--begin::Header-->
-                            <div class="d-flex align-items-center">
-                                <!--begin::User-->
-                                <div class="d-flex align-items-center flex-grow-1">
-                                    <!--begin::Avatar-->
-                                    <div class="symbol symbol-45px me-5">
-                                        <img src="{% static 'media/avatars/300-6.jpg' %}" alt=""/>
-                                    </div>
-                                    <!--end::Avatar-->
-                                    <!--begin::Info-->
-                                    <div class="d-flex flex-column">
-                                        <a href="#" class="text-gray-900 text-hover-primary fs-6 fw-bolder">Grace
-                                            Green</a>
-                                        <span class="text-gray-400 fw-bold">PHP, SQLite, Artisan CLI</span>
-                                    </div>
-                                    <!--end::Info-->
-                                </div>
-                                <!--end::User-->
-                                <!--begin::Menu-->
-                                <div class="my-0">
-                                    <button type="button"
-                                            class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
-                                            data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-                                        <!--begin::Svg Icon | path: icons/duotune/general/gen024.svg-->
-                                        <span class="svg-icon svg-icon-2">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24px"
-                                                                     height="24px" viewBox="0 0 24 24">
-																	<g stroke="none" stroke-width="1" fill="none"
-                                                                       fill-rule="evenodd">
-																		<rect x="5" y="5" width="5" height="5" rx="1"
-                                                                              fill="currentColor"/>
-																		<rect x="14" y="5" width="5" height="5" rx="1"
-                                                                              fill="currentColor" opacity="0.3"/>
-																		<rect x="5" y="14" width="5" height="5" rx="1"
-                                                                              fill="currentColor" opacity="0.3"/>
-																		<rect x="14" y="14" width="5" height="5" rx="1"
-                                                                              fill="currentColor" opacity="0.3"/>
-																	</g>
-																</svg>
-															</span>
-                                        <!--end::Svg Icon-->
-                                    </button>
-                                    <!--begin::Menu 2-->
-                                    <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-bold w-200px"
-                                         data-kt-menu="true">
-                                        <!--begin::Menu item-->
-                                        <div class="menu-item px-3">
-                                            <div class="menu-content fs-6 text-dark fw-bolder px-3 py-4">Quick Actions
-                                            </div>
+                        <!--begin::Feeds Widget |Create Post -->
+                        <div class="card mb-5 mb-xxl-8">
+                            <!--begin::Body-->
+                            <div class="card-body pb-0">
+                                <!--begin::Header-->
+                                <div class="d-flex align-items-center">
+                                    <!--begin::User-->
+                                    <div class="d-flex align-items-center flex-grow-1">
+                                        <!--begin::Avatar-->
+                                        <div class="symbol symbol-45px me-5">
+                                            <img src="{% static 'media/avatars/300-6.jpg' %}" alt=""/>
                                         </div>
-                                        <!--end::Menu item-->
-                                        <!--begin::Menu separator-->
-                                        <div class="separator mb-3 opacity-75"></div>
-                                        <!--end::Menu separator-->
-                                        <!--begin::Menu item-->
-                                        <div class="menu-item px-3">
-                                            <a href="#" class="menu-link px-3">New Ticket</a>
-                                        </div>
-                                        <!--end::Menu item-->
-                                        <!--begin::Menu item-->
-                                        <div class="menu-item px-3">
-                                            <a href="#" class="menu-link px-3">New Customer</a>
-                                        </div>
-                                        <!--end::Menu item-->
-                                        <!--begin::Menu item-->
-                                        <div class="menu-item px-3" data-kt-menu-trigger="hover"
-                                             data-kt-menu-placement="right-start">
-                                            <!--begin::Menu item-->
-                                            <a href="#" class="menu-link px-3">
-                                                <span class="menu-title">New Group</span>
-                                                <span class="menu-arrow"></span>
-                                            </a>
-                                            <!--end::Menu item-->
-                                            <!--begin::Menu sub-->
-                                            <div class="menu-sub menu-sub-dropdown w-175px py-4">
-                                                <!--begin::Menu item-->
-                                                <div class="menu-item px-3">
-                                                    <a href="#" class="menu-link px-3">Admin Group</a>
-                                                </div>
-                                                <!--end::Menu item-->
-                                                <!--begin::Menu item-->
-                                                <div class="menu-item px-3">
-                                                    <a href="#" class="menu-link px-3">Staff Group</a>
-                                                </div>
-                                                <!--end::Menu item-->
-                                                <!--begin::Menu item-->
-                                                <div class="menu-item px-3">
-                                                    <a href="#" class="menu-link px-3">Member Group</a>
-                                                </div>
-                                                <!--end::Menu item-->
-                                            </div>
-                                            <!--end::Menu sub-->
-                                        </div>
-                                        <!--end::Menu item-->
-                                        <!--begin::Menu item-->
-                                        <div class="menu-item px-3">
-                                            <a href="#" class="menu-link px-3">New Contact</a>
-                                        </div>
-                                        <!--end::Menu item-->
-                                        <!--begin::Menu separator-->
-                                        <div class="separator mt-3 opacity-75"></div>
-                                        <!--end::Menu separator-->
-                                        <!--begin::Menu item-->
-                                        <div class="menu-item px-3">
-                                            <div class="menu-content px-3 py-3">
-                                                <a class="btn btn-primary btn-sm px-4" href="#">Generate Reports</a>
-                                            </div>
-                                        </div>
-                                        <!--end::Menu item-->
-                                    </div>
-                                    <!--end::Menu 2-->
-                                </div>
-                                <!--end::Menu-->
-                            </div>
-                            <!--end::Header-->
-                            <!--begin::Form-->
-                            <form id="kt_forms_widget_1_form" class="ql-quil ql-quil-plain pb-3">
-                                <!--begin::Editor-->
-                                <div id="kt_forms_widget_1_editor" class="py-6"></div>
-                                <!--end::Editor-->
-                                <div class="separator"></div>
-                                <!--begin::Toolbar-->
-                                <div id="kt_forms_widget_1_editor_toolbar" class="ql-toolbar d-flex flex-stack py-2">
-                                    <div class="me-2">
-															<span class="ql-formats ql-size ms-0">
-																<select class="ql-size w-75px"></select>
-															</span>
-                                        <span class="ql-formats">
-																<button class="ql-bold"></button>
-																<button class="ql-italic"></button>
-																<button class="ql-underline"></button>
-																<button class="ql-strike"></button>
-																<button class="ql-image"></button>
-																<button class="ql-link"></button>
-																<button class="ql-clean"></button>
-															</span>
-                                    </div>
-                                    <div class="me-n3">
-															<span class="btn btn-icon btn-sm btn-active-color-primary">
-																<i class="flaticon2-clip-symbol icon-ms"></i>
-															</span>
-                                        <span class="btn btn-icon btn-sm btn-active-color-primary">
-																<i class="flaticon2-pin icon-ms"></i>
-															</span>
-                                    </div>
-                                </div>
-                                <!--end::Toolbar-->
-                            </form>
-                            <!--end::Form-->
-                        </div>
-                        <!--end::Body-->
-                    </div>
-                    <!--end::Feeds Widget  |Create Post -->
-{% endif %}
-                    <!--begin::Feeds Widget -->
-                    <div class="card mb-5 mb-xxl-8">
-                        <!--begin::Body-->
-                        <div class="card-body pb-0">
-                            <!--begin::Header-->
-                            <div class="d-flex align-items-center mb-3">
-                                <!--begin::User-->
-                                <div class="d-flex align-items-center flex-grow-1">
-                                    <!--begin::Avatar-->
-                                    <div class="symbol symbol-45px me-5">
-                                        <img src="{% static 'media/avatars/300-21.jpg' %}" alt=""/>
-                                    </div>
-                                    <!--end::Avatar-->
-                                    <!--begin::Info-->
-                                    <div class="d-flex flex-column">
-                                        <a href="#" class="text-gray-900 text-hover-primary fs-6 fw-bolder">Carles
-                                            Nilson</a>
-                                        <span class="text-gray-400 fw-bold">Yestarday at 5:06 PM</span>
-                                    </div>
-                                    <!--end::Info-->
-                                </div>
-                                <!--end::User-->
-                                {% if request.user.is_authenticated %}
-                                <!--begin::Menu-->
-                                <div class="my-0">
-                                    <button type="button"
-                                            class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
-                                            data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-                                        <!--begin::Svg Icon | path: icons/duotune/general/gen024.svg-->
-                                        <span class="svg-icon svg-icon-2">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24px"
-                                                                     height="24px" viewBox="0 0 24 24">
-																	<g stroke="none" stroke-width="1" fill="none"
-                                                                       fill-rule="evenodd">
-																		<rect x="5" y="5" width="5" height="5" rx="1"
-                                                                              fill="currentColor"/>
-																		<rect x="14" y="5" width="5" height="5" rx="1"
-                                                                              fill="currentColor" opacity="0.3"/>
-																		<rect x="5" y="14" width="5" height="5" rx="1"
-                                                                              fill="currentColor" opacity="0.3"/>
-																		<rect x="14" y="14" width="5" height="5" rx="1"
-                                                                              fill="currentColor" opacity="0.3"/>
-																	</g>
-																</svg>
-															</span>
-                                        <!--end::Svg Icon-->
-                                    </button>
-                                    <!--begin::Menu 2-->
-                                    <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-bold w-200px"
-                                         data-kt-menu="true">
-                                        <!--begin::Menu item-->
-                                        <div class="menu-item px-3">
-                                            <div class="menu-content fs-6 text-dark fw-bolder px-3 py-4">Quick Actions
-                                            </div>
-                                        </div>
-                                        <!--end::Menu item-->
-                                        <!--begin::Menu separator-->
-                                        <div class="separator mb-3 opacity-75"></div>
-                                        <!--end::Menu separator-->
-                                        <!--begin::Menu item-->
-                                        <div class="menu-item px-3">
-                                            <a href="#" class="menu-link px-3">Report Post</a>
-                                        </div>
-                                        <!--end::Menu item-->
-                                        <!--begin::Menu separator-->
-                                        <div class="separator mt-3 opacity-75"></div>
-                                        <!--end::Menu separator-->
-                                    </div>
-                                    <!--end::Menu 2-->
-                                </div>
-                                <!--end::Menu-->
-                                {% endif %}
-                            </div>
-                            <!--end::Header-->
-                            <!--begin::Post-->
-                            <div class="mb-7">
-                                <!--begin::Image-->
-                                <div class="bgi-no-repeat bgi-size-cover rounded min-h-250px mb-5"
-                                     style="background-image:url('{% static 'media/stock/900x600/19.jpg' %}');"></div>
-                                <!--end::Image-->
-                                <!--begin::Text-->
-                                <div class="text-gray-800 mb-5">Outlines keep you honest. They stop you from indulging
-                                    in poorly thought-out metaphors about driving and keep you focused on the overall
-                                    structure of your post
-                                </div>
-                                <!--end::Text-->
-                                <!--begin::Toolbar-->
-                                <div class="d-flex align-items-center mb-5">
-                                    <a href="#"
-                                       class="btn btn-sm btn-light btn-color-muted btn-active-light-primary px-4 py-2 me-4">
-                                        <!--begin::Svg Icon | path: icons/duotune/communication/com012.svg-->
-                                        <span class="svg-icon svg-icon-3">
-															<svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                 height="24" viewBox="0 0 24 24" fill="none">
-																<path opacity="0.3"
-                                                                      d="M20 3H4C2.89543 3 2 3.89543 2 5V16C2 17.1046 2.89543 18 4 18H4.5C5.05228 18 5.5 18.4477 5.5 19V21.5052C5.5 22.1441 6.21212 22.5253 6.74376 22.1708L11.4885 19.0077C12.4741 18.3506 13.6321 18 14.8167 18H20C21.1046 18 22 17.1046 22 16V5C22 3.89543 21.1046 3 20 3Z"
-                                                                      fill="currentColor"/>
-																<rect x="6" y="12" width="7" height="2" rx="1"
-                                                                      fill="currentColor"/>
-																<rect x="6" y="7" width="12" height="2" rx="1"
-                                                                      fill="currentColor"/>
-															</svg>
-														</span>
-                                        <!--end::Svg Icon-->12</a>
-                                    <a href="#"
-                                       class="btn btn-sm btn-light btn-color-muted btn-active-light-danger px-4 py-2 me-4">
-                                        <!--begin::Svg Icon | path: icons/duotune/general/gen030.svg-->
-                                        <span class="svg-icon svg-icon-2">
-															<svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                 height="24" viewBox="0 0 24 24" fill="none">
-																<path d="M18.3721 4.65439C17.6415 4.23815 16.8052 4 15.9142 4C14.3444 4 12.9339 4.73924 12.003 5.89633C11.0657 4.73913 9.66 4 8.08626 4C7.19611 4 6.35789 4.23746 5.62804 4.65439C4.06148 5.54462 3 7.26056 3 9.24232C3 9.81001 3.08941 10.3491 3.25153 10.8593C4.12155 14.9013 9.69287 20 12.0034 20C14.2502 20 19.875 14.9013 20.7488 10.8593C20.9109 10.3491 21 9.81001 21 9.24232C21.0007 7.26056 19.9383 5.54462 18.3721 4.65439Z"
-                                                                      fill="currentColor"/>
-															</svg>
-														</span>
-                                        <!--end::Svg Icon-->150</a>
-                                    <a href="#"
-                                       class="btn btn-sm btn-light btn-color-muted btn-active-light-warning px-4 py-2 me-4">
-                                        <i class="fa fa-heart-broken"></i> 25
-                                    </a>
-                                </div>
-                                <!--end::Toolbar-->
-                            </div>
-                            <!--end::Post-->
-                            <!--begin::Comments-->
-                            <div class="mb-7 ps-10">
-                                <!--begin::Reply-->
-                                <div class="d-flex mb-5">
-                                    <!--begin::Avatar-->
-                                    <div class="symbol symbol-45px me-5">
-                                        <img src="{% static 'media/avatars/300-14.jpg' %}" alt=""/>
-                                    </div>
-                                    <!--end::Avatar-->
-                                    <!--begin::Info-->
-                                    <div class="d-flex flex-column flex-row-fluid">
+                                        <!--end::Avatar-->
                                         <!--begin::Info-->
-                                        <div class="d-flex align-items-center flex-wrap mb-1">
-                                            <a href="#" class="text-gray-800 text-hover-primary fw-bolder me-2">Alice
-                                                Danchik</a>
-                                            <span class="text-gray-400 fw-bold fs-7">1 day</span>
-                                            <a href="#" class="ms-auto text-gray-400 text-hover-warning fw-bold fs-7">Report</a>
+                                        <div class="d-flex flex-column">
+                                            <a href="#"
+                                               class="text-gray-900 text-hover-primary fs-6 fw-bolder">{{ request.user.username }}</a>
                                         </div>
                                         <!--end::Info-->
-                                        <!--begin::Post-->
-                                        <span class="text-gray-800 fs-7 fw-normal pt-1">Long before you sit dow to put digital pen to paper you need to make sure you have to sit down and write.</span>
-                                        <!--end::Post-->
                                     </div>
-                                    <!--end::Info-->
-                                </div>
-                                <!--end::Reply-->
-                            </div>
-                            <!--end::Comments-->
-                            <!--begin::Separator-->
-                            <div class="separator mb-4"></div>
-                            <!--end::Separator-->
-                            <!--begin::Reply input-->
-                            <form class="position-relative mb-6">
-                                <textarea class="form-control border-0 p-0 pe-10 resize-none min-h-25px"
-                                          data-kt-autosize="true" rows="1" placeholder="Comment.."></textarea>
-                                <div class="position-absolute top-0 end-0 me-n5">
-                                    <span class="btn btn-icon btn-sm btn-active-color-primary ps-0">
-															<!--begin::Svg Icon | path: icons/duotune/general/gen018.svg-->
-															<span class="svg-icon svg-icon-2 mb-3">
-																<svg width="24" height="24" viewBox="0 0 24 24"
-                                                                     fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z" fill="currentColor"/>
-                                                                    <path opacity="0.3" d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z" fill="currentColor"/>
-                                                                    </svg>
+                                    <!--end::User-->
 
-															</span>
-                                        <!--end::Svg Icon-->
-														</span>
                                 </div>
-                            </form>
-                            <!--edit::Reply input-->
+                                <!--end::Header-->
+                                <!--begin::Form-->
+                                <form id="kt_forms_widget_1_form" class="ql-quil ql-quil-plain pb-3">
+                                    <!--begin::Editor-->
+                                    <div id="kt_forms_widget_1_editor" class="py-6"></div>
+                                    <!--end::Editor-->
+                                    <div class="separator"></div>
+                                    <!--begin::Toolbar-->
+                                    <div id="kt_forms_widget_1_editor_toolbar"
+                                         class="ql-toolbar d-flex flex-stack py-2">
+                                        <div class="me-2">
+                                            {#	<span class="ql-formats ql-size ms-0">#}
+                                            {#	<select class="ql-size w-75px"></select>#}
+                                            {#	</span>#}
+
+                                            <label for="post_pic">
+                                                <i class="fa fa-camera">
+                                                    <input type="file" name="post_pic" id="post_pic" accept="image/*"
+                                                           style="display: none">
+                                                </i>
+
+                                            </label>
+                                            <span class="ql-formats">
+{#                                                <input type="file" id="post_pic" name="post_pic"#}
+{#                                                       accept="image/png, image/gif, image/jpeg">#}
+
+{#                                                <button class="ql-bold"></button>#}
+{#                                                <button class="ql-italic"></button>#}
+{#                                                <button class="ql-underline"></button>#}
+{#                                                <button class="ql-strike"></button>#}
+{#                                                <button class="ql-image"></button>#}
+{#                                                <button class="ql-link"></button>#}
+{#                                                <button class="ql-clean">post </button>#}
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+                                    <button class="btn btn-primary btn-sm float-end mb-5" id="submit-post"
+                                            type="button" onclick="uploadPost()">Post
+                                    </button>
+                                    <!--end::Toolbar-->
+                                </form>
+                                <!--end::Form-->
+                            </div>
+                            <!--end::Body-->
                         </div>
-                        <!--end::Body-->
+                        <!--end::Feeds Widget  |Create Post -->
+                    {% endif %}
+                    <div id="newsFeed_section">
+                        {% for post in posts %}
+                            {% with post=post %}
+                                {% include 'forum/post_section.html' %}
+                            {% endwith %}
+
+                        {% endfor %}
                     </div>
-                    <!--end::Feeds Widget -->
                 </div>
                 <!--end::Col-->
-
                 <!--begin::Col-->
                 <div class="col-xl-4">
                     <!--begin::Widget-->
@@ -413,3 +156,78 @@
     </div>
     <!--end::Post-->
 {% endblock main_content %}
+{% block extra_js %}
+    <script>
+        function uploadPost() {
+            let text_content = $('#kt_forms_widget_1_editor').text();
+            var data = new FormData();
+            data.append("csrfmiddlewaretoken", "{{ csrf_token }}")
+            data.append("text_content", text_content);
+            data.append("post_media", $("input[id^='post_pic']")[0].files[0]);
+
+            $.ajax(
+                {
+                    url: '{% url 'upload_post' %}',
+                    type: "POST",
+                    processData: false,
+                    contentType: false,
+                    mimetype: "multipart/form-data",
+                    data: data,
+                    datatype: 'JSON',
+                    success: function (response) {
+                        console.log(response);
+                        $('#newsFeed_section').prepend(response)
+                        {#TODO after posting refresh the post content area#}
+                        $("#kt_forms_widget_1_editor").load(window.location.href + " #kt_forms_widget_1_editor");
+
+                    }
+                }
+            );
+        }
+
+        function addComment(post) {
+            var content = $('#comentbox' + post).val();
+            $.ajax(
+                {
+                    url: '{% url 'add_comment' %}',
+                    data:
+                        {
+                            'post': post,
+                            'content': content,
+                        },
+                    datatype: 'JSON',
+                    success: function (response) {
+                        $('#comment_section' + post).append(response)
+                        $('#comentbox' + post).val('')
+
+
+                    }
+                }
+            );
+        }
+
+        function addVote(post, vote) {
+
+            $.ajax(
+                {
+                    url: '{% url 'add_vote' %}',
+                    data: {
+                        'post': post,
+                        'vote': vote,
+                    },
+                    datatype: 'JSON',
+                    success: function (response) {
+                        console.log(response)
+                        {#$('#upvote' + post).text('hey there')#}
+                        $('#upvote' + post).text(response.upvote);
+                        $('#downvote' + post).text(response.downvote);
+
+
+                        console.log();
+                        {#var count = document.querySelector('')#}
+                    }
+                }
+            );
+        }
+    </script>
+{% endblock extra_js %}
