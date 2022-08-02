@@ -167,6 +167,7 @@
                                 <textarea class="form-control border-0 p-0 pe-10 resize-none min-h-25px"
                                           data-kt-autosize="true" rows="1" placeholder="Comment.."
                                           id="comentbox{{ post.post.id }}"></textarea>
+
                 <div class="position-absolute top-0 end-0 me-n5"
                      onclick="addComment({{ post.post.id }})">
                                     <span class="btn btn-icon btn-sm btn-active-color-primary ps-0">
@@ -180,11 +181,11 @@
                                                                           d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z"
                                                                           fill="currentColor"/>
                                                                     </svg>
-
 															</span>
-                                        <!--end::Svg Icon-->
-														</span>
+                                        <!--end::Svg Icon--></span>
+
                 </div>
+            <span id="comment_error" class=" mt-5 text-danger ">
             </form>
             <!--edit::Reply input-->
             {% endif %}

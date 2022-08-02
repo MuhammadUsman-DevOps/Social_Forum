@@ -168,6 +168,9 @@
                 $('#post_error').text("Empty post");
                 return;
             }
+            else {
+                $('#post_error').text('')
+            }
             var data = new FormData();
             data.append("csrfmiddlewaretoken", "{{ csrf_token }}")
             data.append("text_content", text_content);
@@ -195,6 +198,13 @@
 
         function addComment(post) {
             var content = $('#comentbox' + post).val();
+            if (content =='')
+            {
+                $('#comment_error').text("Can not post Empty Comment");
+                return
+            }else{
+                $('#comment_error').text('')
+            }
             $.ajax(
                 {
                     url: '{% url 'add_comment' %}',
