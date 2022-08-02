@@ -4,7 +4,7 @@ from django.contrib.auth.hashers import make_password
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 
-from Forum_User.models import Post, ContentPost
+from Forum_User.models import Post, ContentPost, UserProfile
 
 
 def auth_login(request):
@@ -36,6 +36,8 @@ def auth_singup(request):
             is_active=True
         )
         user.save()
+
+        userProfile = UserProfile.objects.create(user=user)
         # TODO: Sent Account Confirmation Email
         auth_user = authenticate(request, username=email_address, password=password)
         if auth_user is not None:
@@ -51,5 +53,8 @@ def auth_logout(request):
 
 def news_feed(request):
     posts = ContentPost.objects.all()
-    context = {'posts': reversed(posts)}
+    user_profile = None
+    if (request.user.is_authenticated):
+        user_profile = UserProfile.objects.get(user=request.user)
+    context = {'posts': reversed(posts), 'user_profile': user_profile}
     return render(request, template_name="forum/news_feed.html", context=context)

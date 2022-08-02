@@ -10,13 +10,16 @@
                 <div class="d-flex align-items-center flex-grow-1">
                     <!--begin::Avatar-->
                     <div class="symbol symbol-45px me-5">
-                        <img src="{% static 'media/avatars/300-21.jpg' %}" alt=""/>
+
+                        <img src="
+                                {% if post.post.user.avatar %}{{ post.post.user.avatar.url }} {% else %} {% static 'media/avatars/blank.png' %} {% endif %}"
+                             alt="avatar"/>
                     </div>
                     <!--end::Avatar-->
                     <!--begin::Info-->
                     <div class="d-flex flex-column">
                         <a href="#"
-                           class="text-gray-900 text-hover-primary fs-6 fw-bolder">{{ post.post.user.username }}</a>
+                           class="text-gray-900 text-hover-primary fs-6 fw-bolder">{{ post.post.user.user.first_name }} {{ post.post.user.user.last_name }}</a>
                         <span class="text-gray-400 fw-bold">{{ post.created }}</span>
                     </div>
                     <!--end::Info-->
@@ -31,21 +34,21 @@
                                 data-kt-menu-placement="bottom-end">
                             <!--begin::Svg Icon | path: icons/duotune/general/gen024.svg-->
                             <span class="svg-icon svg-icon-2">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24px"
-                                                                     height="24px" viewBox="0 0 24 24">
-																	<g stroke="none" stroke-width="1" fill="none"
-                                                                       fill-rule="evenodd">
-																		<rect x="5" y="5" width="5" height="5" rx="1"
-                                                                              fill="currentColor"/>
-																		<rect x="14" y="5" width="5" height="5" rx="1"
-                                                                              fill="currentColor" opacity="0.3"/>
-																		<rect x="5" y="14" width="5" height="5" rx="1"
-                                                                              fill="currentColor" opacity="0.3"/>
-																		<rect x="14" y="14" width="5" height="5" rx="1"
-                                                                              fill="currentColor" opacity="0.3"/>
-																	</g>
-																</svg>
-															</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24px"
+                                     height="24px" viewBox="0 0 24 24">
+                                    <g stroke="none" stroke-width="1" fill="none"
+                                       fill-rule="evenodd">
+                                        <rect x="5" y="5" width="5" height="5" rx="1"
+                                              fill="currentColor"/>
+                                        <rect x="14" y="5" width="5" height="5" rx="1"
+                                              fill="currentColor" opacity="0.3"/>
+                                        <rect x="5" y="14" width="5" height="5" rx="1"
+                                              fill="currentColor" opacity="0.3"/>
+                                        <rect x="14" y="14" width="5" height="5" rx="1"
+                                              fill="currentColor" opacity="0.3"/>
+                                    </g>
+                                </svg>
+                            </span>
                             <!--end::Svg Icon-->
                         </button>
                         <!--begin::Menu 2-->
@@ -77,8 +80,14 @@
                 {% endif %}
             </div>
             <!--end::Header-->
+
             <!--begin::Post-->
             <div class="mb-7">
+                <!--begin::Text-->
+                <div class="text-gray-800 mb-5">{{ post.text_content }}
+                </div>
+                <!--end::Text-->
+
                 <!--begin::Image-->
                 {% if post.post_media %}
                     <div class="bgi-no-repeat bgi-size-cover rounded min-h-250px mb-5"
@@ -88,11 +97,9 @@
 
                 {% endif %}
                 <!--end::Image-->
-                <!--begin::Text-->
-                <div class="text-gray-800 mb-5">{{ post.text_content }}
-                </div>
-                <!--end::Text-->
+
                 <!--begin::Toolbar-->
+                {% if request.user.is_authenticated %}
                 <div class="d-flex align-items-center mb-5">
                     <a
                             class="btn btn-sm btn-light btn-color-muted btn-active-light-primary px-4 py-2 me-4">
@@ -110,9 +117,8 @@
                             </svg>
                         </span>
                         <!--end::Svg Icon-->{{ post.post.comment_set.count }}</a>
-                    <a
-                            class="btn btn-sm btn-light btn-color-muted btn-active-light-danger {{ post.post.is_voted.upvote }} {% if post.post.is_voted.upvote %} active {% endif %} px-4 py-2 me-4"
-                            onclick="addVote({{ post.post.id }},1)">
+                    <a class="btn btn-sm btn-light btn-color-muted btn-active-light-danger {{ post.post.is_voted.upvote }} {% if post.post.is_voted.upvote %} active {% endif %} px-4 py-2 me-4"
+                       onclick="addVote({{ post.post.id }},1)">
                         <!--begin::Svg Icon | path: icons/duotune/general/gen030.svg-->
                         <span class="svg-icon svg-icon-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24"
@@ -132,6 +138,7 @@
                     </a>
                 </div>
                 <!--end::Toolbar-->
+                {% endif %}
             </div>
             <!--end::Post-->
 
@@ -150,10 +157,12 @@
                  </div>
                 <!--end::Comments-->
             </div>
+    {% if request.user.is_authenticated %}
             <!--begin::Separator-->
             <div class="separator mb-4"></div>
             <!--end::Separator-->
             <!--begin::Reply input-->
+
             <form class="position-relative mb-6">
                                 <textarea class="form-control border-0 p-0 pe-10 resize-none min-h-25px"
                                           data-kt-autosize="true" rows="1" placeholder="Comment.."
@@ -178,6 +187,7 @@
                 </div>
             </form>
             <!--edit::Reply input-->
+            {% endif %}
         </div>
         <!--end::Body-->
     </div>
