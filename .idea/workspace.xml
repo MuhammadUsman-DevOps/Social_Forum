@@ -2,30 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb24d59-331f-4fd7-a3d4-7676f99528a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Forum_User/migrations/0003_auto_20220725_1714.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Forum_User/migrations/0004_alter_votes_options.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/post/images/apple-touch-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/post/images/apple-touch-icon_lrxd3QK.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/post/images/c8673ad4c46ade00cf3bd0049db62b16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/post/images/c8673ad4c46ade00cf3bd0049db62b16_copy.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/post/images/c8673ad4c46ade00cf3bd0049db62b16_copy_Wk2i6uF.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/post/images/download_1.jfif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/post/images/usecasediagram.drawio.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/custom/social_forum/addpost.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/forum/comment_section.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/forum/post_section.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum_User/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forum_User/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum_User/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forum_User/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum_User/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forum_User/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum_User/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forum_User/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social_Forum/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Social_Forum/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social_Forum/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Social_Forum/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social_Forum/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Social_Forum/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bases/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bases/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/forum/news_feed.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/forum/news_feed.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/forum/post_section.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/forum/post_section.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +41,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../python development/socially" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../github/believein" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -113,6 +93,14 @@
       <workItem from="1658723459435" duration="25367000" />
       <workItem from="1658757287484" duration="9778000" />
       <workItem from="1658813571412" duration="8672000" />
+      <workItem from="1658898433536" duration="4070000" />
+      <workItem from="1658918293076" duration="427000" />
+      <workItem from="1659196500116" duration="2020000" />
+      <workItem from="1659332085422" duration="6190000" />
+      <workItem from="1659343029174" duration="24000" />
+      <workItem from="1659417506179" duration="610000" />
+      <workItem from="1659418163030" duration="5463000" />
+      <workItem from="1659424941181" duration="8669000" />
     </task>
     <servers />
   </component>

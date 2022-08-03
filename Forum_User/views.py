@@ -3,7 +3,7 @@ from django.core.files.storage import FileSystemStorage
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 
-from Forum_User.models import Post, ContentPost, Comment, Votes
+from Forum_User.models import Post, ContentPost, Comment, Votes, UserProfile
 
 
 def account_overview(request):
@@ -19,7 +19,7 @@ def account_settings(request):
 
 
 def upload_post(request):
-    user = request.user
+    user = UserProfile.objects.get(user=request.user)
     post_media = None
     if request.method == "POST":
         text_content = request.POST.get('text_content', None)
@@ -40,7 +40,7 @@ def upload_post(request):
 
 
 def add_comment(request):
-    user = request.user
+    user = UserProfile.objects.get(user=request.user)
     post = request.GET.get('post')
     content = request.GET.get('content')
     post_obj = Post.objects.get(id=post)
@@ -49,12 +49,12 @@ def add_comment(request):
     comment.save()
 
     context = {'comment': comment}
-    # response = {'success': True, 'html': render(request, 'forum/comment_section.html', context=context)}
+    response = {'success': True, 'html': render(request, 'forum/comment_section.html', context=context)}
     return render(request, 'forum/comment_section.html', context=context)
 
 
 def add_vote(request):
-    user = request.user
+    user = UserProfile.objects.get(user=request.user)
     post = request.GET.get('post')
     vote_type = request.GET.get('vote')
     post_obj = Post.objects.get(id=post)

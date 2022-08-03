@@ -8,7 +8,7 @@ admin.site.site_header = "Social Forum Administration"
 
 
 class PostAdminModel(admin.ModelAdmin):
-    list_display = ['id', 'created', 'user']
+    list_display = ['id', 'created']
     prepopulated_fields = {"slug": ("title",)}
 
 

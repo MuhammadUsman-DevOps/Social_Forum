@@ -28,10 +28,10 @@ class Post(models.Model):
     active = models.BooleanField(default=True)
     location = models.TextField(null=True, blank=True)
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.user.username
+        return self.user.user.username
 
     def comments(self):
         # TODO
@@ -43,10 +43,10 @@ class Post(models.Model):
     def get_downvotes(self):
         return Votes.objects.filter(downvote=True, post=self).count()
 
-    def is_voted(self, user):
+    def is_voted(self):
         vote = None
         try:
-            vote = Votes.objects.get(post=self, user=user)
+            vote = Votes.objects.get(post=self, user=self.user)
         except:
             vote = None
         return vote
@@ -83,7 +83,7 @@ class Comment(models.Model):
 
     active = models.BooleanField(default=True)
 
-    comment_by = models.ForeignKey(User, on_delete=models.CASCADE)
+    comment_by = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
 
     def __str__(self):
@@ -98,15 +98,16 @@ class Votes(models.Model):
     upvote = models.BooleanField(default=False)
     downvote = models.BooleanField(default=False)
 
-    vote_by = models.ForeignKey(User, on_delete=models.CASCADE)
+    vote_by = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
 
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.vote_by.username
+        return self.vote_by.user.username
 
     class Meta:
         verbose_name = "Votes"
         verbose_name_plural = "Votes"
+
