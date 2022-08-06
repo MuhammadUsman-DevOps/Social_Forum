@@ -6,15 +6,12 @@ from Forum_User.models import Post, ContentPost, Comment, Votes, UserProfile
 
 
 def account_overview(request, username):
-    user = ""
-    likes = 0
-    dislikes = 0
-    posts = ""
+
     try:
         user = UserProfile.objects.get(user__username=username)
         # ToDo: Get All Upvotes & Downvotes on user's posts
     except Exception as e:
-        print("Exception in account overview: ",e)
+        print("Exception in account overview: ", e)
         return HttpResponse("Something went wrong!")
     context = {
         "user": user,
@@ -27,7 +24,7 @@ def account_details(request, username):
         user = UserProfile.objects.get(user__username=username)
         # ToDo: Get All Upvotes & Downvotes on user's posts
     except Exception as e:
-        print("Exception in account overview: ",e)
+        print("Exception in account details: ", e)
         return HttpResponse("Something went wrong!")
     context = {
         "user": user,
@@ -40,8 +37,10 @@ def account_settings(request, username):
         user = UserProfile.objects.get(user__username=username)
         # ToDo: Get All Upvotes & Downvotes on user's posts
     except Exception as e:
-        print("Exception in account overview: ",e)
+        print("Exception in account setting: ", e)
         return HttpResponse("Something went wrong!")
+
+    # ToDo: Handle Post erquest and update user profile. User cant update email address
     context = {
         "user": user,
     }

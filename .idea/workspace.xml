@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb24d59-331f-4fd7-a3d4-7676f99528a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/media/post/images/79670_Grapevine_FLAT_JH_02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/post/images/79670_Grapevine_FLAT_JH_02_Sq8ZRxI.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Social_Forum.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Social_Forum.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum_User/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forum_User/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Forum_User/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forum_User/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/settings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/user_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/user_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bases/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bases/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/forum/news_feed.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/forum/news_feed.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/forum/post_section.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/forum/post_section.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/includes/profile_header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/profile_header.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
