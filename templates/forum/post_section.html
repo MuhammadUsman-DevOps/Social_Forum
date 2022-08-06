@@ -12,6 +12,7 @@
                     <div class="symbol symbol-45px me-5">
 
                         <img src="
+
                                 {% if post.post.user.avatar %}{{ post.post.user.avatar.url }} {% else %} {% static 'media/avatars/blank.png' %} {% endif %}"
                              alt="avatar"/>
                     </div>
@@ -100,11 +101,11 @@
 
                 <!--begin::Toolbar-->
                 {% if request.user.is_authenticated %}
-                <div class="d-flex align-items-center mb-5">
-                    <a
-                            class="btn btn-sm btn-light btn-color-muted btn-active-light-primary px-4 py-2 me-4">
-                        <!--begin::Svg Icon | path: icons/duotune/communication/com012.svg-->
-                        <span class="svg-icon svg-icon-3">
+                    <div class="d-flex align-items-center mb-5">
+                        <a
+                                class="btn btn-sm btn-light btn-color-muted btn-active-light-primary px-4 py-2 me-4">
+                            <!--begin::Svg Icon | path: icons/duotune/communication/com012.svg-->
+                            <span class="svg-icon svg-icon-3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24"
                                  height="24" viewBox="0 0 24 24" fill="none">
                                 <path opacity="0.3"
@@ -116,28 +117,28 @@
                                       fill="currentColor"/>
                             </svg>
                         </span>
-                        <!--end::Svg Icon-->{{ post.post.comment_set.count }}</a>
-                    <a class="btn btn-sm btn-light btn-color-muted btn-active-light-danger {{ post.post.is_voted.upvote }} {% if post.post.is_voted.upvote %} active {% endif %} px-4 py-2 me-4"
-                       onclick="addVote({{ post.post.id }},1)">
-                        <!--begin::Svg Icon | path: icons/duotune/general/gen030.svg-->
-                        <span class="svg-icon svg-icon-2">
+                            <!--end::Svg Icon-->{{ post.post.comment_set.count }}</a>
+                        <a class="btn btn-sm btn-light btn-color-muted btn-active-light-danger {{ post.post.is_voted.upvote }} {% if post.post.is_voted.upvote %} active {% endif %} px-4 py-2 me-4"
+                           onclick="addVote({{ post.post.id }},1)">
+                            <!--begin::Svg Icon | path: icons/duotune/general/gen030.svg-->
+                            <span class="svg-icon svg-icon-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24"
                                  height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M18.3721 4.65439C17.6415 4.23815 16.8052 4 15.9142 4C14.3444 4 12.9339 4.73924 12.003 5.89633C11.0657 4.73913 9.66 4 8.08626 4C7.19611 4 6.35789 4.23746 5.62804 4.65439C4.06148 5.54462 3 7.26056 3 9.24232C3 9.81001 3.08941 10.3491 3.25153 10.8593C4.12155 14.9013 9.69287 20 12.0034 20C14.2502 20 19.875 14.9013 20.7488 10.8593C20.9109 10.3491 21 9.81001 21 9.24232C21.0007 7.26056 19.9383 5.54462 18.3721 4.65439Z"
                                       fill="currentColor"/>
                             </svg>
                         </span>
-                        <!--end::Svg Icon-->
-                        <span id="upvote{{ post.post.id }}"> {{ post.post.get_upvotes }}</span>
-                    </a>
-                    <a
-                            class="btn btn-sm btn-light btn-color-muted btn-active-light-warning px-4 py-2 me-4"
-                            onclick="addVote({{ post.post.id }},0)">
-                        <i class="fa fa-heart-broken"></i>
-                        <span id="downvote{{ post.post.id }}"> {{ post.post.get_downvotes }} </span>
-                    </a>
-                </div>
-                <!--end::Toolbar-->
+                            <!--end::Svg Icon-->
+                            <span id="upvote{{ post.post.id }}"> {{ post.post.get_upvotes }}</span>
+                        </a>
+                        <a
+                                class="btn btn-sm btn-light btn-color-muted btn-active-light-warning px-4 py-2 me-4"
+                                onclick="addVote({{ post.post.id }},0)">
+                            <i class="fa fa-heart-broken"></i>
+                            <span id="downvote{{ post.post.id }}"> {{ post.post.get_downvotes }} </span>
+                        </a>
+                    </div>
+                    <!--end::Toolbar-->
                 {% endif %}
             </div>
             <!--end::Post-->
@@ -147,29 +148,29 @@
                 {#{{ post.post.comment_set.count }}#}
                 <div id="comment_section{{ post.post.id }}">
 
-                {% for comment in post.post.comment_set.all %}
-                    {% if comment.active %}
-                        {% with comment=comment %}
-                            {% include "forum/comment_section.html" %}
-                        {% endwith %}
-                    {% endif %}
-                {% endfor %}
-                 </div>
+                    {% for comment in post.post.comment_set.all %}
+                        {% if comment.active %}
+                            {% with comment=comment %}
+                                {% include "forum/comment_section.html" %}
+                            {% endwith %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
                 <!--end::Comments-->
             </div>
-    {% if request.user.is_authenticated %}
-            <!--begin::Separator-->
-            <div class="separator mb-4"></div>
-            <!--end::Separator-->
-            <!--begin::Reply input-->
+            {% if request.user.is_authenticated %}
+                <!--begin::Separator-->
+                <div class="separator mb-4"></div>
+                <!--end::Separator-->
+                <!--begin::Reply input-->
 
-            <form class="position-relative mb-6">
+                <form class="position-relative mb-6">
                                 <textarea class="form-control border-0 p-0 pe-10 resize-none min-h-25px"
                                           data-kt-autosize="true" rows="1" placeholder="Comment.."
                                           id="comentbox{{ post.post.id }}"></textarea>
 
-                <div class="position-absolute top-0 end-0 me-n5"
-                     onclick="addComment({{ post.post.id }})">
+                    <div class="position-absolute top-0 end-0 me-n5"
+                         onclick="addComment({{ post.post.id }})">
                                     <span class="btn btn-icon btn-sm btn-active-color-primary ps-0">
 															<!--begin::Svg Icon | path: icons/duotune/general/gen018.svg-->
 															<span class="svg-icon svg-icon-2 mb-3">
@@ -184,10 +185,10 @@
 															</span>
                                         <!--end::Svg Icon--></span>
 
-                </div>
-            <span id="comment_error" class=" mt-5 text-danger ">
-            </form>
-            <!--edit::Reply input-->
+                    </div>
+                    <span id="comment_error" class=" mt-5 text-danger "></span>
+                </form>
+                <!--edit::Reply input-->
             {% endif %}
         </div>
         <!--end::Body-->

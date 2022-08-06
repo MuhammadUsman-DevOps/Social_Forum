@@ -40,7 +40,7 @@
                                          style="background-image: url('{% static 'media/svg/avatars/blank.svg' %}')">
                                         <!--begin::Preview existing avatar-->
                                         <div class="image-input-wrapper w-125px h-125px"
-                                             style="background-image: url({% static 'media/avatars/300-1.jpg' %})"></div>
+                                             style="background-image: url({% if user.avatar %} {{ user.avatar.url }}  {% else %} {%  static 'media/avatars/blank.png' %} {% endif %})"></div>
                                         <!--end::Preview existing avatar-->
                                         <!--begin::Label-->
                                         <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
@@ -89,14 +89,14 @@
                                         <div class="col-lg-6 fv-row">
                                             <input type="text" name="fname"
                                                    class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
-                                                   placeholder="First name" value="Max"/>
+                                                   placeholder="First name" value="{{ user.user.first_name }}"/>
                                         </div>
                                         <!--end::Col-->
                                         <!--begin::Col-->
                                         <div class="col-lg-6 fv-row">
                                             <input type="text" name="lname"
                                                    class="form-control form-control-lg form-control-solid"
-                                                   placeholder="Last name" value="Smith"/>
+                                                   placeholder="Last name" value="{{ user.user.last_name }}"/>
                                         </div>
                                         <!--end::Col-->
                                     </div>
@@ -114,7 +114,7 @@
                                 <div class="col-lg-8 fv-row">
                                     <input type="text" name="email_address"
                                            class="form-control form-control-lg form-control-solid"
-                                           placeholder="Email Address" value="user@mail.com" disabled/>
+                                           placeholder="Email Address" value="{{ user.user.email }}" disabled/>
                                 </div>
                                 <!--end::Col-->
                             </div>
