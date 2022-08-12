@@ -7,7 +7,14 @@
             <!--begin: Pic-->
             <div class="me-7 mb-4">
                 <div class="symbol symbol-100px symbol-lg-160px symbol-fixed position-relative">
+<<<<<<< HEAD
                     <img src="{% if user.avatar %} {{ user.avatar.url }}  {% else %} {%  static 'media/avatars/blank.png' %} {% endif %}" alt="image"/>
+=======
+                     <img src="
+                                {% if user.avatar %}{{ user.avatar.url }} {% else %} {% static 'media/avatars/blank.png' %} {% endif %}"
+                             alt="avatar" />
+{#                    <img src="{% static 'media/avatars/300-1.jpg' %}" alt="image"/>#}
+>>>>>>> 1e546d8ec17e137ccd60bed15d83fd8891931e74
                     <div class="position-absolute translate-middle bottom-0 start-100 mb-6 bg-success rounded-circle border border-4 border-white h-20px w-20px"></div>
                 </div>
             </div>
@@ -20,8 +27,13 @@
                     <div class="d-flex flex-column">
                         <!--begin::Name-->
                         <div class="d-flex align-items-center mb-2">
+<<<<<<< HEAD
                             <a href="" class="text-gray-900 text-hover-primary fs-2 fw-bolder me-1">{{ user.user.first_name }} {{ user.user.last_name }}</a>
                             <a href="">
+=======
+                            <a href="#" class="text-gray-900 text-hover-primary fs-2 fw-bolder me-1">{{ user.user.first_name }} {{ user.user.last_name }} </a>
+                            <a href="#">
+>>>>>>> 1e546d8ec17e137ccd60bed15d83fd8891931e74
                                 <!--begin::Svg Icon | path: icons/duotune/general/gen026.svg-->
                                 <span class="svg-icon svg-icon-1 svg-icon-primary">
 																	<svg xmlns="http://www.w3.org/2000/svg" width="24px"
@@ -68,7 +80,11 @@
                                                                           fill="currentColor"/>
 																</svg>
 															</span>
+<<<<<<< HEAD
                                 <!--end::Svg Icon-->{{ user.user.email }}</a>
+=======
+                                <!--end::Svg Icon-->{{ user.user.username }}</a>
+>>>>>>> 1e546d8ec17e137ccd60bed15d83fd8891931e74
                         </div>
                         <!--end::Info-->
                     </div>
@@ -130,7 +146,7 @@
                                        <i class="fa fa-heart text-danger"></i>
                                    </span>
                                     <div class="fs-2 fw-bolder" data-kt-countup="true"
-                                         data-kt-countup-value="4500" data-kt-countup-prefix="">0
+                                         data-kt-countup-value="{{ upvotes }}" data-kt-countup-prefix="">0
                                     </div>
                                 </div>
                                 <!--end::Number-->
@@ -147,7 +163,7 @@
                                        <i class="fa fa-heart-broken text-danger"></i>
                                    </span>
                                     <div class="fs-2 fw-bolder" data-kt-countup="true"
-                                         data-kt-countup-value="75">0
+                                         data-kt-countup-value="{{ downvotes }}">0
                                     </div>
                                 </div>
                                 <!--end::Number-->

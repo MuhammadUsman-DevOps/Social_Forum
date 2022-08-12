@@ -1,10 +1,18 @@
+<<<<<<< HEAD
 from django.contrib.auth.models import User
 from django.http import JsonResponse, HttpResponse
+=======
+import jsonify as jsonify
+
+from django.core.files.storage import FileSystemStorage
+from django.http import HttpResponse, JsonResponse
+>>>>>>> 1e546d8ec17e137ccd60bed15d83fd8891931e74
 from django.shortcuts import render, redirect
 
 from Forum_User.models import Post, ContentPost, Comment, Votes, UserProfile
 
 
+<<<<<<< HEAD
 def account_overview(request, username):
 
     try:
@@ -45,6 +53,78 @@ def account_settings(request, username):
         "user": user,
     }
     return render(request, template_name="account/settings.html", context=context)
+=======
+def account_overview(request):
+    _user = UserProfile.objects.get(user=request.user)
+    _posts = Post.objects.filter(user=_user)
+    posts = []
+    upvotes = 0
+    downvotes = 0
+    for post in _posts:
+        posts.append(post.contentpost_set.first())
+        upvotes += post.get_upvotes()
+        downvotes += post.get_downvotes()
+
+    context = {'user': _user, 'posts': posts, 'upvotes': upvotes, 'downvotes': downvotes}
+    return render(request, template_name="account/overview.html", context=context)
+
+
+def account_details(request):
+    _user = UserProfile.objects.get(user=request.user)
+    _posts = Post.objects.filter(user=_user)
+
+    upvotes = 0
+    downvotes = 0
+    for post in _posts:
+        upvotes += post.get_upvotes()
+        downvotes += post.get_downvotes()
+    context = {'user': _user, 'upvotes': upvotes, 'downvotes': downvotes}
+    return render(request, template_name="account/user_details.html", context=context)
+
+
+def account_settings(request):
+    _user = UserProfile.objects.get(user=request.user)
+    _posts = Post.objects.filter(user=_user)
+
+    upvotes = 0
+    downvotes = 0
+    for post in _posts:
+        upvotes += post.get_upvotes()
+        downvotes += post.get_downvotes()
+    context = {'user': _user, 'upvotes': upvotes, 'downvotes': downvotes}
+    return render(request, template_name="account/settings.html", context=context)
+
+
+def edit_profile(request):
+    avatar = None
+    _user = UserProfile.objects.get(user=request.user)
+    print(_user.avatar)
+
+    if request.method == "POST":
+        print('inside post ')
+        first_name = request.POST['fname']
+        last_name = request.POST['lname']
+        country = request.POST['country']
+
+        _user.user.first_name = first_name
+        _user.user.last_name = last_name
+        _user.country = country
+
+        # TODO TRY CATCH
+        avatar = request.FILES['avatar']
+        # avatar = request.POST.get('avatar', None)
+        if avatar is not None:
+            _user.avatar = avatar
+
+        _user.save()
+        _user.user.save()
+
+    print(_user.avatar)
+
+    context = {'user': _user}
+    # return render(request, template_name="account/settings.html", context=context)
+    return redirect(request.META['HTTP_REFERER'])
+>>>>>>> 1e546d8ec17e137ccd60bed15d83fd8891931e74
 
 
 def upload_post(request):
@@ -55,7 +135,7 @@ def upload_post(request):
         post_media = request.FILES.get('post_media')
 
         post = Post.objects.create(user=user)
-        content_post = None;
+        content_post = None
         post.save()
         if post_media is not None:
             content_post = ContentPost.objects.create(post=post, text_content=text_content, post_media=post_media)
