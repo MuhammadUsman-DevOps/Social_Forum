@@ -33,7 +33,7 @@
                         <!--end::Label-->
                         <!--begin::Col-->
                         <div class="col-lg-8">
-                            <span class="fw-bolder fs-6 text-gray-800">Max Smith</span>
+                            <span class="fw-bolder fs-6 text-gray-800">{{ user.user.first_name }} {{ user.user.last_name }}</span>
                         </div>
                         <!--end::Col-->
                     </div>
@@ -45,7 +45,7 @@
                         <!--end::Label-->
                         <!--begin::Col-->
                         <div class="col-lg-8 fv-row">
-                            <span class="fw-bold text-gray-800 fs-6">user@mail.com</span>
+                            <span class="fw-bold text-gray-800 fs-6">{{ user.user.username }}</span>
                              <span class="badge badge-success">Verified</span>
                         </div>
                         <!--end::Col-->

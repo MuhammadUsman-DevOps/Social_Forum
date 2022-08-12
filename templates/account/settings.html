@@ -25,7 +25,8 @@
                 <!--begin::Content-->
                 <div id="kt_account_settings_profile_details" class="collapse show">
                     <!--begin::Form-->
-                    <form id="kt_account_profile_details_form" class="form">
+                    <form  class="form" method="post" action="{% url 'edit_profile' %}"  enctype="multipart/form-data" >
+                    {% csrf_token %}
                         <!--begin::Card body-->
                         <div class="card-body border-top p-9">
                             <!--begin::Input group-->
@@ -40,7 +41,7 @@
                                          style="background-image: url('{% static 'media/svg/avatars/blank.svg' %}')">
                                         <!--begin::Preview existing avatar-->
                                         <div class="image-input-wrapper w-125px h-125px"
-                                             style="background-image: url({% static 'media/avatars/300-1.jpg' %})"></div>
+                                             style="background-image: url({% if user.avatar %}{{ user.avatar.url }} {% else %} {% static 'media/avatars/blank.png' %} {% endif %})"></div>
                                         <!--end::Preview existing avatar-->
                                         <!--begin::Label-->
                                         <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
@@ -48,7 +49,7 @@
                                                title="Change avatar">
                                             <i class="bi bi-pencil-fill fs-7"></i>
                                             <!--begin::Inputs-->
-                                            <input type="file" name="avatar" accept=".png, .jpg, .jpeg"/>
+                                            <input type="file" name="avatar" id="avatar" accept=".png, .jpg, .jpeg"/>
                                             <input type="hidden" name="avatar_remove"/>
                                             <!--end::Inputs-->
                                         </label>
@@ -70,6 +71,7 @@
                                     </div>
                                     <!--end::Image input-->
                                     <!--begin::Hint-->
+
                                     <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
                                     <!--end::Hint-->
                                 </div>
@@ -87,16 +89,16 @@
                                     <div class="row">
                                         <!--begin::Col-->
                                         <div class="col-lg-6 fv-row">
-                                            <input type="text" name="fname"
+                                            <input type="text" name="fname" id="fname"
                                                    class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
-                                                   placeholder="First name" value="Max"/>
+                                                   placeholder="First name" value="{{ user.user.first_name }}"/>
                                         </div>
                                         <!--end::Col-->
                                         <!--begin::Col-->
                                         <div class="col-lg-6 fv-row">
-                                            <input type="text" name="lname"
+                                            <input type="text" name="lname" id="lname"
                                                    class="form-control form-control-lg form-control-solid"
-                                                   placeholder="Last name" value="Smith"/>
+                                                   placeholder="Last name" value="{{ user.user.last_name }}"/>
                                         </div>
                                         <!--end::Col-->
                                     </div>
@@ -114,7 +116,7 @@
                                 <div class="col-lg-8 fv-row">
                                     <input type="text" name="email_address"
                                            class="form-control form-control-lg form-control-solid"
-                                           placeholder="Email Address" value="user@mail.com" disabled/>
+                                           placeholder="Email Address" value="{{ user.user.username }}" disabled/>
                                 </div>
                                 <!--end::Col-->
                             </div>
@@ -132,8 +134,8 @@
                                 <!--end::Label-->
                                 <!--begin::Col-->
                                 <div class="col-lg-8 fv-row">
-                                    <select name="country" aria-label="Select a Country" data-control="select2"
-                                            data-placeholder="Select a country..."
+                                    <select name="country" id="country" aria-label="Select a Country" data-control="select2"
+                                            data-placeholder="{{ user.country }}"
                                             class="form-select form-select-solid form-select-lg fw-bold">
                                         <option value="">Select a Country...</option>
                                         <option data-kt-flag="flags/afghanistan.svg" value="AF">Afghanistan</option>
@@ -453,7 +455,7 @@
                         <!--begin::Actions-->
                         <div class="card-footer d-flex justify-content-end py-6 px-9">
                             <button type="reset" class="btn btn-light btn-active-light-primary me-2">Discard</button>
-                            <button type="submit" class="btn btn-primary" id="kt_account_profile_details_submit">Save
+                            <button type="submit" class="btn btn-primary">Save
                                 Changes
                             </button>
                         </div>

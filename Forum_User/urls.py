@@ -11,9 +11,12 @@ urlpatterns = [
     path('', views.account_overview, name="account_overview"),
     path('details/', views.account_details, name="account_details"),
     path('settings/', views.account_settings, name="account_settings"),
+    path('edit-profile/', views.edit_profile, name="edit_profile"),
     path('upload-post/', views.upload_post, name="upload_post"),
     path('add-comment/', views.add_comment, name="add_comment"),
     path('add-vote/', views.add_vote, name="add_vote"),
+
+
 
 ]
 urlpatterns += staticfiles_urlpatterns()
