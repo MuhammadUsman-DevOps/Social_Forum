@@ -18,10 +18,12 @@
                         <h3 class="fw-bolder m-0">Profile Details</h3>
                     </div>
                     <!--end::Card title-->
+                    {% if request.user.usernanme == user.user.username %}
                     <!--begin::Action-->
                     <a href="#" class="btn btn-primary align-self-center">Edit
                         Profile</a>
                     <!--end::Action-->
+                    {% endif %}
                 </div>
                 <!--begin::Card header-->
                 <!--begin::Card body-->
@@ -45,13 +47,18 @@
                         <!--end::Label-->
                         <!--begin::Col-->
                         <div class="col-lg-8 fv-row">
+<<<<<<< HEAD
+                            <span class="fw-bold text-gray-800 fs-6">{{ user.user.email }}</span>
+=======
                             <span class="fw-bold text-gray-800 fs-6">{{ user.user.username }}</span>
+>>>>>>> 1e546d8ec17e137ccd60bed15d83fd8891931e74
                              <span class="badge badge-success">Verified</span>
                         </div>
                         <!--end::Col-->
                     </div>
                     <!--end::Input group-->
-                    <!--begin::Input group-->
+                   {% if user.country %}
+                        <!--begin::Input group-->
                     <div class="row mb-7">
                         <!--begin::Label-->
                         <label class="col-lg-4 fw-bold text-muted">Country
@@ -60,11 +67,12 @@
                         <!--end::Label-->
                         <!--begin::Col-->
                         <div class="col-lg-8">
-                            <span class="fw-bolder fs-6 text-gray-800">Germany</span>
+                            <span class="fw-bolder fs-6 text-gray-800">{{ user.country }}</span>
                         </div>
                         <!--end::Col-->
                     </div>
                     <!--end::Input group-->
+                    {% endif %}
                     <!--begin::Notice-->
                     <div class="notice d-flex bg-light-warning rounded border-warning border border-dashed p-6">
                         <!--begin::Icon-->
@@ -87,7 +95,7 @@
                             <!--begin::Content-->
                             <div class="fw-bold">
                                 <h4 class="text-gray-900 fw-bolder">We need your attention!</h4>
-                                <div class="fs-6 text-gray-700">Your account is restricted due to community guidelines violations.
+                                <div class="fs-6 text-gray-700">This account is restricted due to community guidelines violations.
                                     <a class="fw-bolder" href="#">Contact Us</a>.
                                 </div>
                             </div>

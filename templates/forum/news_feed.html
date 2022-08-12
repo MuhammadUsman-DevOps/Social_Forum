@@ -67,7 +67,7 @@
                                             <label for="post_pic">
                                                 <i class="fa fa-camera fs-2x btn-hover-primary" id="btn-upload-image">
                                                     <input type="file" name="post_pic" id="post_pic" accept="image/*"
-                                                           style="display: none">
+                                                           style="display: none;">
                                                 </i>
                                             </label>
                                             <span id="image_name"> </span>
@@ -165,7 +165,7 @@
             let text_content = $('#post_text').val();
 
             if (text_content == '' && $('#post_pic')[0].files.length === 0) {
-                $('#post_error').text("Empty post");
+                $('#post_error').text("Enter something to post");
                 return;
             }
             else {
@@ -187,8 +187,8 @@
                     datatype: 'JSON',
                     success: function (response) {
                         console.log(response);
-                        $('#newsFeed_section').prepend(response)
-                        $('#post_text').val('')
+                        $('#newsFeed_section').prepend(response);
+                        $('#post_text').val('');
                         {#TODO after posting refresh the post content area#}
 
                     }
@@ -200,7 +200,7 @@
             var content = $('#comentbox' + post).val();
             if (content =='')
             {
-                $('#comment_error').text("Can not post Empty Comment");
+                $('#comment_error').text("Please enter something to comment");
                 return
             }else{
                 $('#comment_error').text('')

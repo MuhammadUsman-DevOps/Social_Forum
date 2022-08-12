@@ -1,12 +1,59 @@
+<<<<<<< HEAD
+from django.contrib.auth.models import User
+from django.http import JsonResponse, HttpResponse
+=======
 import jsonify as jsonify
 
 from django.core.files.storage import FileSystemStorage
 from django.http import HttpResponse, JsonResponse
+>>>>>>> 1e546d8ec17e137ccd60bed15d83fd8891931e74
 from django.shortcuts import render, redirect
 
 from Forum_User.models import Post, ContentPost, Comment, Votes, UserProfile
 
 
+<<<<<<< HEAD
+def account_overview(request, username):
+
+    try:
+        user = UserProfile.objects.get(user__username=username)
+        # ToDo: Get All Upvotes & Downvotes on user's posts
+    except Exception as e:
+        print("Exception in account overview: ", e)
+        return HttpResponse("Something went wrong!")
+    context = {
+        "user": user,
+    }
+    return render(request, template_name="account/overview.html", context=context)
+
+
+def account_details(request, username):
+    try:
+        user = UserProfile.objects.get(user__username=username)
+        # ToDo: Get All Upvotes & Downvotes on user's posts
+    except Exception as e:
+        print("Exception in account details: ", e)
+        return HttpResponse("Something went wrong!")
+    context = {
+        "user": user,
+    }
+    return render(request, template_name="account/user_details.html", context=context)
+
+
+def account_settings(request, username):
+    try:
+        user = UserProfile.objects.get(user__username=username)
+        # ToDo: Get All Upvotes & Downvotes on user's posts
+    except Exception as e:
+        print("Exception in account setting: ", e)
+        return HttpResponse("Something went wrong!")
+
+    # ToDo: Handle Post erquest and update user profile. User cant update email address
+    context = {
+        "user": user,
+    }
+    return render(request, template_name="account/settings.html", context=context)
+=======
 def account_overview(request):
     _user = UserProfile.objects.get(user=request.user)
     _posts = Post.objects.filter(user=_user)
@@ -77,6 +124,7 @@ def edit_profile(request):
     context = {'user': _user}
     # return render(request, template_name="account/settings.html", context=context)
     return redirect(request.META['HTTP_REFERER'])
+>>>>>>> 1e546d8ec17e137ccd60bed15d83fd8891931e74
 
 
 def upload_post(request):

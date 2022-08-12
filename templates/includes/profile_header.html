@@ -7,10 +7,14 @@
             <!--begin: Pic-->
             <div class="me-7 mb-4">
                 <div class="symbol symbol-100px symbol-lg-160px symbol-fixed position-relative">
+<<<<<<< HEAD
+                    <img src="{% if user.avatar %} {{ user.avatar.url }}  {% else %} {%  static 'media/avatars/blank.png' %} {% endif %}" alt="image"/>
+=======
                      <img src="
                                 {% if user.avatar %}{{ user.avatar.url }} {% else %} {% static 'media/avatars/blank.png' %} {% endif %}"
                              alt="avatar" />
 {#                    <img src="{% static 'media/avatars/300-1.jpg' %}" alt="image"/>#}
+>>>>>>> 1e546d8ec17e137ccd60bed15d83fd8891931e74
                     <div class="position-absolute translate-middle bottom-0 start-100 mb-6 bg-success rounded-circle border border-4 border-white h-20px w-20px"></div>
                 </div>
             </div>
@@ -23,8 +27,13 @@
                     <div class="d-flex flex-column">
                         <!--begin::Name-->
                         <div class="d-flex align-items-center mb-2">
+<<<<<<< HEAD
+                            <a href="" class="text-gray-900 text-hover-primary fs-2 fw-bolder me-1">{{ user.user.first_name }} {{ user.user.last_name }}</a>
+                            <a href="">
+=======
                             <a href="#" class="text-gray-900 text-hover-primary fs-2 fw-bolder me-1">{{ user.user.first_name }} {{ user.user.last_name }} </a>
                             <a href="#">
+>>>>>>> 1e546d8ec17e137ccd60bed15d83fd8891931e74
                                 <!--begin::Svg Icon | path: icons/duotune/general/gen026.svg-->
                                 <span class="svg-icon svg-icon-1 svg-icon-primary">
 																	<svg xmlns="http://www.w3.org/2000/svg" width="24px"
@@ -42,6 +51,7 @@
                         <!--end::Name-->
                         <!--begin::Info-->
                         <div class="d-flex flex-wrap fw-bold fs-6 mb-4 pe-2">
+                            {% if user.country %}
                             <a href="#"
                                class="d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2">
                                 <!--begin::Svg Icon | path: icons/duotune/general/gen018.svg-->
@@ -55,7 +65,8 @@
                                                                           fill="currentColor"/>
 																</svg>
 															</span>
-                                <!--end::Svg Icon-->SF, Bay Area</a>
+                                <!--end::Svg Icon-->{{ user.country }}</a>
+                            {% endif %}
                             <a href="#"
                                class="d-flex align-items-center text-gray-400 text-hover-primary mb-2">
                                 <!--begin::Svg Icon | path: icons/duotune/communication/com011.svg-->
@@ -69,7 +80,11 @@
                                                                           fill="currentColor"/>
 																</svg>
 															</span>
+<<<<<<< HEAD
+                                <!--end::Svg Icon-->{{ user.user.email }}</a>
+=======
                                 <!--end::Svg Icon-->{{ user.user.username }}</a>
+>>>>>>> 1e546d8ec17e137ccd60bed15d83fd8891931e74
                         </div>
                         <!--end::Info-->
                     </div>
@@ -92,6 +107,14 @@
                                     </div>
                                 </div>
                                 <!--end::Heading-->
+                                {% if request.user.username == user.user.username %}
+                                    <!--begin::Menu item-->
+                                <div class="menu-item px-3">
+                                    <a href="{% url 'account_settings' user.user.username %}" class="menu-link flex-stack px-3">Edit Profile
+                                        </a>
+                                </div>
+                                <!--end::Menu item-->
+                                {% else %}
                                 <!--begin::Menu item-->
                                 <div class="menu-item px-3">
                                     <a href="#" class="menu-link flex-stack px-3">Report User
@@ -100,6 +123,7 @@
                                            title="Please report the post only if you find any content that goes against community guidelines"></i></a>
                                 </div>
                                 <!--end::Menu item-->
+                                {% endif %}
                             </div>
                             <!--end::Menu 3-->
                         </div>
@@ -175,21 +199,23 @@
             <!--begin::Nav item-->
             <li class="nav-item mt-2">
                 <a class="nav-link text-active-primary ms-0 me-10 py-5"
-                   href="{% url 'account_overview' %}">Posts</a>
+                   href="{% url 'account_overview' user.user.username %}">Posts</a>
             </li>
             <!--end::Nav item-->
              <!--begin::Nav item-->
             <li class="nav-item mt-2">
                 <a class="nav-link text-active-primary ms-0 me-10 py-5"
-                   href="{% url 'account_details' %}">Profile</a>
+                   href="{% url 'account_details' user.user.username %}">Profile</a>
             </li>
             <!--end::Nav item-->
+            {% if request.user.username == user.user.username %}
             <!--begin::Nav item-->
             <li class="nav-item mt-2">
                 <a class="nav-link text-active-primary ms-0 me-10 py-5"
-                   href="{% url 'account_settings' %}">Settings</a>
+                   href="{% url 'account_settings' user.user.username %}">Settings</a>
             </li>
             <!--end::Nav item-->
+            {% endif %}
         </ul>
         <!--begin::Navs-->
     </div>

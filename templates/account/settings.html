@@ -41,7 +41,11 @@
                                          style="background-image: url('{% static 'media/svg/avatars/blank.svg' %}')">
                                         <!--begin::Preview existing avatar-->
                                         <div class="image-input-wrapper w-125px h-125px"
+<<<<<<< HEAD
+                                             style="background-image: url({% if user.avatar %} {{ user.avatar.url }}  {% else %} {%  static 'media/avatars/blank.png' %} {% endif %})"></div>
+=======
                                              style="background-image: url({% if user.avatar %}{{ user.avatar.url }} {% else %} {% static 'media/avatars/blank.png' %} {% endif %})"></div>
+>>>>>>> 1e546d8ec17e137ccd60bed15d83fd8891931e74
                                         <!--end::Preview existing avatar-->
                                         <!--begin::Label-->
                                         <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
@@ -116,7 +120,11 @@
                                 <div class="col-lg-8 fv-row">
                                     <input type="text" name="email_address"
                                            class="form-control form-control-lg form-control-solid"
+<<<<<<< HEAD
+                                           placeholder="Email Address" value="{{ user.user.email }}" disabled/>
+=======
                                            placeholder="Email Address" value="{{ user.user.username }}" disabled/>
+>>>>>>> 1e546d8ec17e137ccd60bed15d83fd8891931e74
                                 </div>
                                 <!--end::Col-->
                             </div>
