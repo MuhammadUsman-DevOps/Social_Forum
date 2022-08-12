@@ -140,7 +140,6 @@
             <div class="mb-7 ps-10">
                 {#{{ post.post.comment_set.count }}#}
                 <div id="comment_section{{ post.post.id }}">
-<<<<<<< HEAD
 
                     {% for comment in post.post.comment_set.all %}
                         {% if comment.active %}
@@ -183,45 +182,6 @@
                     <span id="comment_error" class=" mt-5 text-danger "></span>
                 </form>
                 <!--edit::Reply input-->
-=======
-                {% for comment in post.post.comment_set.all %}
-                    {% if comment.active %}
-                        {% with comment=comment %}
-                            {% include "forum/comment_section.html" %}
-                        {% endwith %}
-                    {% endif %}
-                {% endfor %}
-                 </div>
-                <!--end::Comments-->
-            </div>
-            {% if request.user.is_authenticated %}
-            <!--begin::Separator-->
-            <div class="separator mb-4"></div>
-            <!--end::Separator-->
-            <!--begin::Reply input-->
-            <form class="position-relative mb-6">
-                <textarea class="form-control border-0 p-0 pe-10 resize-none min-h-25px" data-kt-autosize="true" rows="1" placeholder="Comment.."
-                          id="comentbox{{ post.post.id }}"></textarea>
-                <div class="position-absolute top-0 end-0 me-n5" onclick="addComment({{ post.post.id }})">
-                    <span class="btn btn-icon btn-sm btn-active-color-primary ps-0">
-                        <!--begin::Svg Icon | path: icons/duotune/general/gen018.svg-->
-                        <span class="svg-icon svg-icon-2 mb-3">
-                            <svg width="24" height="24" viewBox="0 0 24 24"
-                                 fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z"
-                                      fill="currentColor"/>
-                                <path opacity="0.3"
-                                      d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z"
-                                      fill="currentColor"/>
-                                </svg>
-                        </span>
-                    </span>
-                    <!--end::Svg Icon-->
-                </div>
-                <span id="comment_error" class=" mt-5 text-danger "> </span>
-            </form>
-            <!--edit::Reply input-->
->>>>>>> 1e546d8ec17e137ccd60bed15d83fd8891931e74
             {% endif %}
         </div>
         <!--end::Body-->
