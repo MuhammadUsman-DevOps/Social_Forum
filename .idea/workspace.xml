@@ -2,23 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb24d59-331f-4fd7-a3d4-7676f99528a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/media/post/images/79670_Grapevine_FLAT_JH_02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/post/images/79670_Grapevine_FLAT_JH_02_Sq8ZRxI.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Social_Forum.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/users/avatar/WhatsApp_Image_2022-05-17_at_12.39.50_PM.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/users/avatar/WhatsApp_Image_2022-05-17_at_12.39.54_PM.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Social_Forum.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Social_Forum.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Forum_User/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forum_User/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Forum_User/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forum_User/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Forum_User/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forum_User/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Forum_User/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forum_User/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social_Forum/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Social_Forum/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social_Forum/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Social_Forum/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/users/avatar/20210510_154352.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/users/avatar/20210510_154352_1UpxXed.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/users/avatar/20210510_154549.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/users/avatar/98716924_original.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/users/avatar/98716924_original_G6bsK51.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/users/avatar/WhatsApp_Image_2022-08-10_at_9.23.05_AM.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/users/avatar/WhatsApp_Image_2022-08-10_at_9.23.05_AM_9ndiRvv.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/users/avatar/WhatsApp_Image_2022-08-10_at_9.23.05_AM_hHD1wLc.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/overview.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/overview.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/account/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/settings.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/account/user_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/user_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bases/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bases/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/forum/news_feed.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/forum/news_feed.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/forum/post_section.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/forum/post_section.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/includes/profile_header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/profile_header.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,6 +128,8 @@
       <workItem from="1660130813940" duration="5359000" />
       <workItem from="1660151224633" duration="1536000" />
       <workItem from="1660324957485" duration="776000" />
+      <workItem from="1660369868525" duration="1527000" />
+      <workItem from="1660371428284" duration="3944000" />
     </task>
     <servers />
   </component>

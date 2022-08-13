@@ -3,13 +3,13 @@ from django.db import models
 
 
 class UserProfile(models.Model):
-    # avatar = models.ImageField(upload_to="users/avatar", null=True, blank=True)
-    # country = models.CharField(max_length=100, null=True, blank=True)
-
+    avatar = models.ImageField(upload_to="users/avatar", null=True, blank=True)
+    country = models.CharField(max_length=100, null=True, blank=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.user.username
+
 
     class Meta:
         verbose_name = "User Profile"

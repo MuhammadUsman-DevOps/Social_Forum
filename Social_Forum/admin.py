@@ -24,7 +24,11 @@ class VoteAdminModel(admin.ModelAdmin):
     list_display = ['upvote', 'downvote', 'created', 'vote_by']
 
 
-admin.site.register(UserProfile)
+class UserProfileAdminModel(admin.ModelAdmin):
+    list_display = ['user','avatar','country']
+
+
+admin.site.register(UserProfile, UserProfileAdminModel)
 admin.site.register(Post, PostAdminModel)
 admin.site.register(ContentPost, ContentPostAdminModel)
 admin.site.register(Comment, CommentAdminModel)
