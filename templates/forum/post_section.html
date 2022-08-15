@@ -11,9 +11,7 @@
                     <!--begin::Avatar-->
                     <div class="symbol symbol-45px me-5">
 
-                        <img src="
-
-                                {% if post.post.user.avatar %}{{ post.post.user.avatar.url }} {% else %} {% static 'media/avatars/blank.png' %} {% endif %}"
+                        <img src="{% if post.post.user.avatar %}{{ post.post.user.avatar.url }} {% else %} {% static 'media/avatars/blank.png' %} {% endif %}"
                              alt="avatar" />
                     </div>
                     <!--end::Avatar-->

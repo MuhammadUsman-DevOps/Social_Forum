@@ -1,7 +1,4 @@
-from django.contrib.auth.models import User
-from django.http import JsonResponse, HttpResponse
-
-from django.core.files.storage import FileSystemStorage
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse
 
 from django.shortcuts import render, redirect
@@ -9,8 +6,10 @@ from django.shortcuts import render, redirect
 from Forum_User.models import Post, ContentPost, Comment, Votes, UserProfile
 
 
-def account_overview(request):
-    _user = UserProfile.objects.get(user=request.user)
+@login_required
+def account_overview(request, username):
+    print(username)
+    _user = UserProfile.objects.get(user__username=username)
     _posts = Post.objects.filter(user=_user)
     posts = []
     upvotes = 0
@@ -24,8 +23,9 @@ def account_overview(request):
     return render(request, template_name="account/overview.html", context=context)
 
 
-def account_details(request):
-    _user = UserProfile.objects.get(user=request.user)
+@login_required
+def account_details(request, username):
+    _user = UserProfile.objects.get(user__username=username)
     _posts = Post.objects.filter(user=_user)
 
     upvotes = 0
@@ -37,8 +37,9 @@ def account_details(request):
     return render(request, template_name="account/user_details.html", context=context)
 
 
-def account_settings(request):
-    _user = UserProfile.objects.get(user=request.user)
+@login_required
+def account_settings(request, username):
+    _user = UserProfile.objects.get(user__username=username)
     _posts = Post.objects.filter(user=_user)
 
     upvotes = 0
@@ -50,6 +51,7 @@ def account_settings(request):
     return render(request, template_name="account/settings.html", context=context)
 
 
+@login_required
 def edit_profile(request):
     avatar = None
     _user = UserProfile.objects.get(user=request.user)
@@ -65,8 +67,10 @@ def edit_profile(request):
         _user.user.last_name = last_name
         _user.country = country
 
-        # TODO TRY CATCH
-        avatar = request.FILES['avatar']
+        try:
+            avatar = request.FILES['avatar']
+        except:
+            avatar = None
         # avatar = request.POST.get('avatar', None)
         if avatar is not None:
             _user.avatar = avatar
@@ -84,6 +88,8 @@ def edit_profile(request):
 def upload_post(request):
     user = UserProfile.objects.get(user=request.user)
     post_media = None
+    print(user)
+
     if request.method == "POST":
         text_content = request.POST.get('text_content', None)
         post_media = request.FILES.get('post_media')

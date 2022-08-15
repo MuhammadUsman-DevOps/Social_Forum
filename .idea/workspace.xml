@@ -2,25 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb24d59-331f-4fd7-a3d4-7676f99528a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/media/post/images/WhatsApp_Image_2022-08-10_at_9.23.05_AM.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/users/avatar/98716924_original.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/users/avatar/98716924_original_G6bsK51.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/users/avatar/WhatsApp_Image_2022-08-10_at_9.23.05_AM.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/users/avatar/WhatsApp_Image_2022-08-10_at_9.23.05_AM_9ndiRvv.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/users/avatar/WhatsApp_Image_2022-08-10_at_9.23.05_AM_hHD1wLc.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/users/avatar/WhatsApp_Image_2022-05-17_at_12.39.50_PM.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/users/avatar/WhatsApp_Image_2022-05-17_at_12.39.54_PM.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Social_Forum.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Social_Forum.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/Forum_User/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forum_User/views.py" afterDir="false" />
-=======
+      <change beforePath="$PROJECT_DIR$/Forum_User/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forum_User/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Forum_User/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forum_User/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Forum_User/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forum_User/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Forum_User/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forum_User/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social_Forum/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Social_Forum/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social_Forum/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Social_Forum/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/users/avatar/20210510_154352.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/users/avatar/20210510_154352_1UpxXed.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/users/avatar/20210510_154549.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/users/avatar/98716924_original.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/users/avatar/98716924_original_G6bsK51.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/users/avatar/WhatsApp_Image_2022-08-10_at_9.23.05_AM.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/users/avatar/WhatsApp_Image_2022-08-10_at_9.23.05_AM_9ndiRvv.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/users/avatar/WhatsApp_Image_2022-08-10_at_9.23.05_AM_hHD1wLc.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/account/overview.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/overview.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/account/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/settings.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/account/user_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/user_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/forum/news_feed.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/forum/news_feed.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/forum/post_section.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/forum/post_section.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/includes/profile_header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/profile_header.html" afterDir="false" />
->>>>>>> 1e546d8ec17e137ccd60bed15d83fd8891931e74
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,11 +62,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-<<<<<<< HEAD
-    <property name="last_opened_file_path" value="C:/github/believein" />
-=======
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
->>>>>>> 1e546d8ec17e137ccd60bed15d83fd8891931e74
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -97,7 +99,7 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -125,6 +127,9 @@
       <workItem from="1659768411436" duration="8533000" />
       <workItem from="1660130813940" duration="5359000" />
       <workItem from="1660151224633" duration="1536000" />
+      <workItem from="1660324957485" duration="776000" />
+      <workItem from="1660369868525" duration="1527000" />
+      <workItem from="1660371428284" duration="3944000" />
     </task>
     <servers />
   </component>
@@ -136,29 +141,14 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="2334" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1659769096402">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2334" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864/1920.0.1920.1080@1920.0.1920.1080" timestamp="1659769096402" />
-    <state x="2381" y="182" key="SettingsEditor" timestamp="1659769224015">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2381" y="182" key="SettingsEditor/0.0.1536.864/1920.0.1920.1080@1920.0.1920.1080" timestamp="1659769224015" />
-    <state x="2543" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1659770376529">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2543" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1536.864/1920.0.1920.1080@1920.0.1920.1080" timestamp="1659770376529" />
   </component>
 </project>

@@ -161,7 +161,6 @@
 {% block extra_js %}
     <script>
         function uploadPost() {
-            {#let text_content = $('#kt_forms_widget_1_editor').text();#}
             let text_content = $('#post_text').val();
 
             if (text_content == '' && $('#post_pic')[0].files.length === 0) {
