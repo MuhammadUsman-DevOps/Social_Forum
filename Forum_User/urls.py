@@ -17,8 +17,11 @@ urlpatterns = [
     path('edit-profile/', views.edit_profile, name="edit_profile"),
 
     path('upload-post/', views.upload_post, name="upload_post"),
-    path('add-comment/', views.add_comment, name="add_comment"),
+    path('add-comment/',  views.add_comment, name="add_comment"),
     path('add-vote/', views.add_vote, name="add_vote"),
+
+    path('search_by_tag/', views.search_by_tag, name="search_by_tag"),
+
 
 
 

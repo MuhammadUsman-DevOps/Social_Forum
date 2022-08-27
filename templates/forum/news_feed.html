@@ -97,24 +97,25 @@
                 <!--end::Col-->
                 <!--begin::Col-->
                 <div class="col-xl-4">
-                    <!--begin::Widget-->
-                    <div class="card mb-5 mb-xxl-8">
-                        <!--begin::Header-->
-                        <div class="card-header border-0 pt-5">
-                            <!--begin::Title-->
-                            <h3 class="card-title align-items-start flex-column">
-                                <span class="card-label fw-bolder fs-3 mb-1">Promoted Product</span>
-                                <span class="text-muted fw-bold fs-7">Lorem Ipsum Dollar Summit</span>
-                            </h3>
-                            <!--end::Title-->
-                            <!--begin::Toolbar-->
-                            <div class="card-toolbar">
-                                <!--begin::Menu-->
-                                <button type="button"
-                                        class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
-                                        data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-                                    <!--begin::Svg Icon | path: icons/duotune/general/gen024.svg-->
-                                    <span class="svg-icon svg-icon-2">
+                    <div class="col-xl-12">
+                        <!--begin::Widget-->
+                        <div class="card mb-5 mb-xxl-8">
+                            <!--begin::Header-->
+                            <div class="card-header border-0 pt-5">
+                                <!--begin::Title-->
+                                <h3 class="card-title align-items-start flex-column">
+                                    <span class="card-label fw-bolder fs-3 mb-1">Trending Topics:</span>
+                                    <span class="text-muted fw-bold fs-7">people are talking about these things</span>
+                                </h3>
+                                <!--end::Title-->
+                                <!--begin::Toolbar-->
+                                <div class="card-toolbar">
+                                    <!--begin::Menu-->
+                                    <button type="button"
+                                            class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
+                                            data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                                        <!--begin::Svg Icon | path: icons/duotune/general/gen024.svg-->
+                                        <span class="svg-icon svg-icon-2">
 															<svg xmlns="http://www.w3.org/2000/svg" width="24px"
                                                                  height="24px" viewBox="0 0 24 24">
 																<g stroke="none" stroke-width="1" fill="none"
@@ -130,25 +131,91 @@
 																</g>
 															</svg>
 														</span>
-                                    <!--end::Svg Icon-->
-                                </button>
+                                        <!--end::Svg Icon-->
+                                    </button>
 
-                                <!--end::Menu-->
+                                    <!--end::Menu-->
+                                </div>
+                                <!--end::Toolbar-->
                             </div>
-                            <!--end::Toolbar-->
-                        </div>
-                        <!--end::Header-->
-                        <!--begin::Body-->
-                        <div class="card-body">
-                            <!--begin::Picture-->
-                            <img src="{% static 'media/avatars/300-1.jpg' %}" class="card-img-top">
-                            <!--end::Picture-->
-                        </div>
-                        <!--end::Body-->
-                    </div>
-                    <!--end::Widget-->
+                            <!--end::Header-->
+                            <!--begin::Body-->
+                            <div class="card-body">
+                                <!--begin::Picture-->
+                                <div class="row">
+                                    {% for tag in hash_tags %}
+                                        <div class="col-md-4 pb-1">
+                                            <a class="btn btn-md btn-light btn-color-muted btn-active-light-primary px-4 py-2 me-4"
+                                               onclick="searchByHashTag('{{ tag }}')">
+                                                {{ tag }}</a>
 
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                                <!--end::Picture-->
+                            </div>
+                            <!--end::Body-->
+                        </div>
+                        <!--end::Widget-->
+
+                    </div>
+                    <!--end::Col-->
+                    <!--begin::Col-->
+                    <div class="col-xl-12">
+                        <!--begin::Widget-->
+                        <div class="card mb-5 mb-xxl-8">
+                            <!--begin::Header-->
+                            <div class="card-header border-0 pt-5">
+                                <!--begin::Title-->
+                                <h3 class="card-title align-items-start flex-column">
+                                    <span class="card-label fw-bolder fs-3 mb-1">Promoted Product</span>
+                                    <span class="text-muted fw-bold fs-7">Lorem Ipsum Dollar Summit</span>
+                                </h3>
+                                <!--end::Title-->
+                                <!--begin::Toolbar-->
+                                <div class="card-toolbar">
+                                    <!--begin::Menu-->
+                                    <button type="button"
+                                            class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
+                                            data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                                        <!--begin::Svg Icon | path: icons/duotune/general/gen024.svg-->
+                                        <span class="svg-icon svg-icon-2">
+															<svg xmlns="http://www.w3.org/2000/svg" width="24px"
+                                                                 height="24px" viewBox="0 0 24 24">
+																<g stroke="none" stroke-width="1" fill="none"
+                                                                   fill-rule="evenodd">
+																	<rect x="5" y="5" width="5" height="5" rx="1"
+                                                                          fill="currentColor"/>
+																	<rect x="14" y="5" width="5" height="5" rx="1"
+                                                                          fill="currentColor" opacity="0.3"/>
+																	<rect x="5" y="14" width="5" height="5" rx="1"
+                                                                          fill="currentColor" opacity="0.3"/>
+																	<rect x="14" y="14" width="5" height="5" rx="1"
+                                                                          fill="currentColor" opacity="0.3"/>
+																</g>
+															</svg>
+														</span>
+                                        <!--end::Svg Icon-->
+                                    </button>
+
+                                    <!--end::Menu-->
+                                </div>
+                                <!--end::Toolbar-->
+                            </div>
+                            <!--end::Header-->
+                            <!--begin::Body-->
+                            <div class="card-body">
+                                <!--begin::Picture-->
+                                <img src="{% static 'media/avatars/300-1.jpg' %}" class="card-img-top">
+                                <!--end::Picture-->
+                            </div>
+                            <!--end::Body-->
+                        </div>
+                        <!--end::Widget-->
+
+                    </div>
                 </div>
+
                 <!--end::Col-->
 
             </div>
@@ -188,7 +255,7 @@
                         console.log(response);
                         $('#newsFeed_section').prepend(response);
                         $('#post_text').val('');
-                        {#TODO after posting refresh the post content area#}
+                        $('#post_pic').val("");
 
                     }
                 }
@@ -197,12 +264,11 @@
 
         function addComment(post) {
             var content = $('#comentbox' + post).val();
-            if (content =='')
-            {
+            if (content == '') {
                 $('#comment_error').text("Please enter something to comment");
                 return
-            }else{
-                $('#comment_error').text('')
+            } else {
+                $('#comment_error').text('');
             }
             $.ajax(
                 {
@@ -249,6 +315,25 @@
             );
         }
 
+        function searchByHashTag(tag) {
+            console.log(tag);
+
+            $.ajax(
+                {
+                    url:' {% url 'search_by_tag' %}',
+                    method: 'GET',
+                    data: {
+                        'tag': tag,
+                    },
+                    {#datatype: 'JSON',#}
+                    success: function (response) {
+                        {#console.log(response);#}
+                        $('#newsFeed_section').html(response);
+                    }
+                }
+            );
+        }
+
         function readURL(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
@@ -261,8 +346,6 @@
             }
         }
 
-        {#$("#post_pic").change(function () {#}
-        {#    readURL(this);#}
-        {# });#}
+
     </script>
 {% endblock extra_js %}

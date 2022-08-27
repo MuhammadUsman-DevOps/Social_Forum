@@ -3,8 +3,8 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
-
-from Forum_User.models import Post, ContentPost, UserProfile
+import re
+from Forum_User.models import Post, ContentPost, UserProfile, HashTags
 
 
 def auth_login(request):
@@ -53,8 +53,32 @@ def auth_logout(request):
 
 def news_feed(request):
     posts = ContentPost.objects.all()
+    hash_tags = HashTags.objects.all()
+    hash_tags = trending_hashtags(hashtags=hash_tags, posts=posts)
     user_profile = None
-    if (request.user.is_authenticated):
-        user_profile = UserProfile.objects.get(user=request.user)
-    context = {'posts': reversed(posts), 'user_profile': user_profile}
+    if request.user.is_authenticated:
+        try:
+            user_profile = UserProfile.objects.get(user=request.user)
+        except:
+            user_profile = None
+    context = {'posts': reversed(posts), 'hash_tags': hash_tags, 'user_profile': user_profile}
     return render(request, template_name="forum/news_feed.html", context=context)
+
+
+def trending_hashtags(hashtags, posts):
+    # ----------------------------- FINDING THE TRENDING HASHTAGS BASED ON THEIR USAGE IN POST-----------------------
+    trending_tags = {}
+    for tag in hashtags:
+        trending_tags[tag] = 0
+        for post in posts:
+            if post.post.hashtags is not None:
+                if re.search(tag.tag, post.post.hashtags, re.IGNORECASE):
+                    trending_tags[tag] = trending_tags[tag] + 1
+    # SORTING THE LIST BY DECENDING ORDER
+    trending_tags = dict(sorted(trending_tags.items(), key=lambda item: item[1], reverse=True))
+    trending_tags = trending_tags.keys()
+    # IF FINAL LIST IS GREATER THEN 10 THEN SELECT ONLY TOP 10 TAGS ELSE COMPLETE LIST
+    if len(trending_tags) > 10:
+        trending_tags = trending_tags[0:10]
+
+    return trending_tags

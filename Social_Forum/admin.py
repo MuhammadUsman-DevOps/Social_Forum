@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from Forum_User.models import UserProfile, Post, ContentPost, Comment, Votes
+from Forum_User.models import UserProfile, Post, ContentPost, Comment, Votes, HashTags
 
 admin.site.index_title = "Social Forum Administration"
 admin.site.site_title = "Social Forum Administration"
@@ -33,3 +33,4 @@ admin.site.register(Post, PostAdminModel)
 admin.site.register(ContentPost, ContentPostAdminModel)
 admin.site.register(Comment, CommentAdminModel)
 admin.site.register(Votes, VoteAdminModel)
+admin.site.register(HashTags)

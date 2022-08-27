@@ -2,29 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb24d59-331f-4fd7-a3d4-7676f99528a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/media/users/avatar/WhatsApp_Image_2022-05-17_at_12.39.50_PM.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/users/avatar/WhatsApp_Image_2022-05-17_at_12.39.54_PM.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Social_Forum.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Social_Forum.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Forum_User/migrations/0002_auto_20220823_0929.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/post/images/MCP.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/post/images/WhatsApp_Image_2022-05-16_at_12.30.46_PM.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/post/images/WhatsApp_Image_2022-05-16_at_12.30.46_PM_25fb8YG.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/post/images/mcp1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/post/images/mcp1_XK0RYY0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/forum/search_post.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum_User/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forum_User/migrations/0001_initial.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Forum_User/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forum_User/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Forum_User/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forum_User/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Forum_User/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forum_User/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Social_Forum/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Social_Forum/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social_Forum/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Social_Forum/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social_Forum/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Social_Forum/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/users/avatar/20210510_154352.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/users/avatar/20210510_154352_1UpxXed.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/users/avatar/20210510_154549.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/users/avatar/98716924_original.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/users/avatar/98716924_original_G6bsK51.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/users/avatar/WhatsApp_Image_2022-08-10_at_9.23.05_AM.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/users/avatar/WhatsApp_Image_2022-08-10_at_9.23.05_AM_9ndiRvv.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/users/avatar/WhatsApp_Image_2022-08-10_at_9.23.05_AM_hHD1wLc.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/overview.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/overview.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/settings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/user_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/user_details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/forum/news_feed.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/forum/news_feed.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/forum/post_section.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/forum/post_section.html" afterDir="false" />
     </list>
@@ -40,8 +31,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -130,6 +121,13 @@
       <workItem from="1660324957485" duration="776000" />
       <workItem from="1660369868525" duration="1527000" />
       <workItem from="1660371428284" duration="3944000" />
+      <workItem from="1660711876285" duration="862000" />
+      <workItem from="1661150763866" duration="4000" />
+      <workItem from="1661226826195" duration="5603000" />
+      <workItem from="1661265347990" duration="1146000" />
+      <workItem from="1661323381791" duration="3183000" />
+      <workItem from="1661326604260" duration="3571000" />
+      <workItem from="1661403811065" duration="3053000" />
     </task>
     <servers />
   </component>
@@ -150,5 +148,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/templates/forum/news_feed.html</url>
+          <line>264</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

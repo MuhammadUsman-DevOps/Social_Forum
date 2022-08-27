@@ -1,0 +1,10 @@
+{% load static %}
+{% if not posts %}
+    <div class="center"><h4> No Post For This Topic</h4> </div>
+{% else %}
+{% for post in posts %}
+    {% with post=post %}
+        {% include 'forum/post_section.html' %}
+    {% endwith %}
+{% endfor %}
+{% endif %}
