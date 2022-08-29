@@ -1,6 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse
-
+import re
 from django.shortcuts import render, redirect
 
 from Forum_User.models import Post, ContentPost, Comment, Votes, UserProfile
@@ -85,6 +85,7 @@ def edit_profile(request):
     return redirect(request.META['HTTP_REFERER'])
 
 
+@login_required
 def upload_post(request):
     user = UserProfile.objects.get(user=request.user)
     post_media = None
@@ -92,9 +93,12 @@ def upload_post(request):
 
     if request.method == "POST":
         text_content = request.POST.get('text_content', None)
+        has_tag = ''
+        if extract_hash_tags(text_content):
+            hast_tags = ','.join(extract_hash_tags(text_content))
         post_media = request.FILES.get('post_media')
 
-        post = Post.objects.create(user=user)
+        post = Post.objects.create(user=user, hashtags=hast_tags)
         content_post = None
         post.save()
         if post_media is not None:
@@ -108,6 +112,11 @@ def upload_post(request):
     return render(request, template_name="forum/post_section.html", context=context)
 
 
+def extract_hash_tags(s):
+    return set(part[1:] for part in s.split() if part.startswith('#'))
+
+
+@login_required
 def add_comment(request):
     user = UserProfile.objects.get(user=request.user)
     post = request.GET.get('post')
@@ -122,6 +131,7 @@ def add_comment(request):
     return render(request, 'forum/comment_section.html', context=context)
 
 
+@login_required
 def add_vote(request):
     user = UserProfile.objects.get(user=request.user)
     post = request.GET.get('post')
@@ -152,3 +162,17 @@ def add_vote(request):
 
     response = {'success': True, 'upvote': post_obj.get_upvotes(), 'downvote': post_obj.get_downvotes()}
     return JsonResponse(response)
+
+
+def search_by_tag(request):
+    tag = request.GET.get('tag')
+    _posts = ContentPost.objects.all()
+    posts = []
+    for post in _posts:
+        if post.post.hashtags is not None:
+            if re.search(tag, post.post.hashtags, re.IGNORECASE):
+                posts.append(post)
+
+    context = {'posts': posts}
+    # return posts
+    return render(request, template_name="forum/search_post.html", context=context)

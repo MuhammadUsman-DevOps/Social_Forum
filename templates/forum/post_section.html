@@ -1,4 +1,5 @@
 {% load static %}
+
 {% if post.active %}
     <!--begin::Feeds Widget -->
     <div class="card mb-5 mb-xxl-8">
@@ -92,10 +93,8 @@
                 {% endif %}
                 <!--end::Image-->
                 <!--begin::Toolbar-->
-                {% if request.user.is_authenticated %}
                     <div class="d-flex align-items-center mb-5">
-                        <a
-                                class="btn btn-sm btn-light btn-color-muted btn-active-light-primary px-4 py-2 me-4">
+                        <a class="btn btn-sm btn-light btn-color-muted btn-active-light-primary px-4 py-2 me-4">
                             <!--begin::Svg Icon | path: icons/duotune/communication/com012.svg-->
                             <span class="svg-icon svg-icon-3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24"
@@ -131,14 +130,13 @@
                         </a>
                     </div>
                     <!--end::Toolbar-->
-                {% endif %}
+
             </div>
             <!--end::Post-->
             <!--begin::Comments-->
             <div class="mb-7 ps-10">
                 {#{{ post.post.comment_set.count }}#}
                 <div id="comment_section{{ post.post.id }}">
-
                     {% for comment in post.post.comment_set.all %}
                         {% if comment.active %}
                             {% with comment=comment %}
@@ -149,7 +147,7 @@
                 </div>
                 <!--end::Comments-->
             </div>
-            {% if request.user.is_authenticated %}
+
                 <!--begin::Separator-->
                 <div class="separator mb-4"></div>
                 <!--end::Separator-->
@@ -180,7 +178,7 @@
                     <span id="comment_error" class=" mt-5 text-danger "></span>
                 </form>
                 <!--edit::Reply input-->
-            {% endif %}
+
         </div>
         <!--end::Body-->
     </div>

@@ -28,6 +28,7 @@ class Post(models.Model):
     active = models.BooleanField(default=True)
     location = models.TextField(null=True, blank=True)
 
+    hashtags = models.TextField(null=True, blank=True)
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
 
     def __str__(self):
@@ -111,3 +112,13 @@ class Votes(models.Model):
         verbose_name = "Votes"
         verbose_name_plural = "Votes"
 
+
+class HashTags(models.Model):
+    tag = models.TextField(null=True, blank=True)
+
+    def __str__(self):
+        return self.tag
+
+    class Meta:
+        verbose_name = 'HastTags'
+        verbose_name_plural = 'HashTags'
