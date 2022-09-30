@@ -3,7 +3,7 @@ from django.http import HttpResponse, JsonResponse
 import re
 from django.shortcuts import render, redirect
 
-from Forum_User.models import Post, ContentPost, Comment, Votes, UserProfile
+from Forum_User.models import Post, ContentPost, Comment, Votes, UserProfile, HashTags
 
 
 @login_required
@@ -93,10 +93,17 @@ def upload_post(request):
 
     if request.method == "POST":
         text_content = request.POST.get('text_content', None)
-        has_tag = ''
-        if extract_hash_tags(text_content):
-            hast_tags = ','.join(extract_hash_tags(text_content))
+
+        hast_tags = ''
+        tag_list = extract_hash_tags(text_content)
+        try:
+            if tag_list:
+                hast_tags = ','.join(tag_list)
+        except:
+            hast_tags = ''
+
         post_media = request.FILES.get('post_media')
+        save_hash_tags(tag_list)
 
         post = Post.objects.create(user=user, hashtags=hast_tags)
         content_post = None
@@ -115,6 +122,11 @@ def upload_post(request):
 def extract_hash_tags(s):
     return set(part[1:] for part in s.split() if part.startswith('#'))
 
+
+def save_hash_tags(tags):
+    for t in tags:
+        if not HashTags.objects.filter(tag=t).exists():
+            HashTags.objects.create(tag=t)
 
 @login_required
 def add_comment(request):

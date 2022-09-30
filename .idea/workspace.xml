@@ -2,22 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb24d59-331f-4fd7-a3d4-7676f99528a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Forum_User/migrations/0002_auto_20220823_0929.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/post/images/MCP.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/post/images/WhatsApp_Image_2022-05-16_at_12.30.46_PM.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/post/images/WhatsApp_Image_2022-05-16_at_12.30.46_PM_25fb8YG.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/post/images/mcp1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/post/images/mcp1_XK0RYY0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/forum/search_post.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum_User/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forum_User/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Forum_User/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forum_User/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Forum_User/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Forum_User/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social_Forum/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Social_Forum/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Social_Forum/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Social_Forum/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/forum/news_feed.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/forum/news_feed.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/forum/post_section.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/forum/post_section.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +116,8 @@
       <workItem from="1661323381791" duration="3183000" />
       <workItem from="1661326604260" duration="3571000" />
       <workItem from="1661403811065" duration="3053000" />
+      <workItem from="1661744998274" duration="31000" />
+      <workItem from="1662028293661" duration="1007000" />
     </task>
     <servers />
   </component>

@@ -68,6 +68,7 @@ def news_feed(request):
 def trending_hashtags(hashtags, posts):
     # ----------------------------- FINDING THE TRENDING HASHTAGS BASED ON THEIR USAGE IN POST-----------------------
     trending_tags = {}
+
     for tag in hashtags:
         trending_tags[tag] = 0
         for post in posts:
